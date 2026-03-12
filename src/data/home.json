@@ -3,7 +3,7 @@
         "documentationUrl": "https://projectsveltos.github.io/sveltos/latest/"
     },
     "hero": {
-        "headline": "Intelligent Orchestration for <br/>Multi-Cluster Kubernetes",
+        "headline": "Intelligent Orchestration for <br/>Multi-Cluster Kubernetes <img src=\"/images/icons/k8s.svg\" class=\"inline-block w-8 h-12 lg:w-8 lg:h-8 align-middle ml-1\" />",
         "subhead": "The open-source event-driven controller that automates add-on distribution, enforces global policies, and eliminates configuration drift across your entire fleet.",
         "buttons": [
             {
@@ -11,14 +11,14 @@
                 "link": "https://projectsveltos.github.io/sveltos/getting_started/install/install/",
                 "color": "primary",
                 "type": "primary",
-                "hasArrowIcon": false
+                "iconName": "arrow"
             },
             {
-                "text": "Star us",
+                "text": "Give us a Star",
                 "link": "https://github.com/projectsveltos/addon-controller",
                 "color": "white",
                 "type": "secondary",
-                "iconName": "github"
+                "iconName": "star"
             }
         ]
     },
@@ -66,7 +66,7 @@
                 "icon": "/images/icons/eventdriven.svg",
                 "title": "Drift Detection & Remediation",
                 "desc": "Automatically detect and correct configuration drift. Ensure your clusters always match your desired state, preventing manual 'quick fixes' from causing permanent issues.",
-                "image": "https://github.com/projectsveltos/sveltos/blob/main/docs/assets/reconcile_configuration_drift.gif",
+                "image": "https://projectsveltos.github.io/sveltos/assets/reconcile_configuration_drift.gif",
                 "detail": "Sveltos continuously monitors managed clusters. If a resource is modified or deleted locally, Sveltos can notify you or automatically trigger a reconciliation to restore the correct configuration instantly."
             }
         ],
@@ -75,7 +75,8 @@
                 "text": "Explore all features",
                 "url": "https://projectsveltos.github.io/sveltos/latest/",
                 "type": "primary",
-                "color": "primary"
+                "color": "primary",
+                "iconName": "arrow"
             },
             {
                 "text": "View on GitHub",
@@ -88,7 +89,7 @@
     },
     "enterprise": {
         "tag": "Enterprise",
-        "image": "/images/background-images/entreprise-support.svg",
+        "image": "/images/background-images/entreprise-support.png",
         "heading": "Scale Your Fleet with Absolute Security and Control",
         "bullets": [
            {
@@ -107,9 +108,10 @@
         "buttons": [
             {
                 "text": "Get Enterprise",
-                "url": "/pricing/",
+                "url": "/contact/",
                 "type": "secondary",
-                "color": "black"
+                "color": "black",
+                "iconName": "arrow"
             }
         ]
     },

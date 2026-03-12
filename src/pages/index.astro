@@ -69,7 +69,7 @@ const getYoutubeId = (url) => {
       </div>
       <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-12">
           {page.oss.buttons.map(b => (
-            <Button type={b.type} cta={b.text} url={b.url} iconName={b.hasArrowIcon ? 'arrow' : null} color={b.color} background={b.type === 'primary' ? 'primary' : 'transparent'} />
+             <Button type={b.type} cta={b.text} url={b.url} iconName={b.iconName || (b.hasArrowIcon ? 'arrow' : null)} color={b.color} background={b.type === 'primary' ? 'primary' : 'transparent'} />
           ))}
       </div>
     </section>
@@ -78,9 +78,9 @@ const getYoutubeId = (url) => {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <span class="bg-orange text-white text-sm font-bold px-3 py-1 uppercase tracking-wider mb-8 inline-block rounded-sm">{page.enterprise.tag}</span>
         <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
-          <div class="w-full lg:w-5/12">
-            <h2 class="text-2xl lg:text-3xl font-bold mb-6 text-white leading-[1.15]">{page.enterprise.heading}</h2>
-            <img src={page.enterprise.image} alt="Security" class="w-full max-w-sm h-auto mt-8 opacity-90 hidden lg:block" />
+          <div class="w-full lg:w-5/12 flex flex-col justify-end">
+            <img src={page.enterprise.image} alt="Entreprise Support Sveltos s" class="w-full max-w-2xl h-auto mb-10 opacity-95 rounded-xl shadow-2xl" />
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-white leading-tight">{page.enterprise.heading}</h2>
           </div>
           <div class="w-full lg:w-7/12 flex flex-col justify-center gap-10">
             {page.enterprise.bullets.map(b => (
@@ -90,8 +90,8 @@ const getYoutubeId = (url) => {
               </div>
             ))}
             <div class="flex flex-wrap gap-4 mt-8 pt-4 border-t border-[#1e293b]">
-              <Button type="primary" cta="Get Pull Mode (Enterprise)" url="/pricing/" background="white" color="white" />
-              <Button type="secondary" cta="Learn more" url="/pricing/" background="transparent" color="white-outline" />
+              <Button type="primary" cta="Get Pull Mode (Enterprise)" url="/pricing/" background="white" color="white" iconName="arrow" />
+              <Button type="secondary" cta="Learn more" url="/pricing/" background="transparent" color="white-outline" iconName="arrow" />
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@ const getYoutubeId = (url) => {
                 <p class="text-gray m-0">Learn how to get the most out of Sveltos with step-by-step video tutorials and written guides.</p>
             </div>
             <div class="flex shrink-0">
-                <Button type="primary" cta="Explore Learning Center" url="/learning/" color="blue" />
+                 <Button type="primary" cta="Explore Learning Center" url="/learning/" color="blue" iconName="arrow" target="_blank" />
             </div>
         </div>
 

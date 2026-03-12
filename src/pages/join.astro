@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
 import Hero from '../components/Hero.astro';
+import Button from '../components/Button.astro';
 import adoptHeroImage from '../assets/adopt/adoptHeroImage.png';
 import MerchSection from '../components/MerchSection.astro';
 import homeData from '../data/home.json';
@@ -82,9 +83,14 @@ const heroData = {
             <p class="text-white/80 text-xl leading-relaxed mb-12 max-w-2xl">
                 The Sveltos Slack community is the best place to get real-time help, share your ideas, and connect with other Kubernetes enthusiasts.
             </p>
-            <a href="https://projectsveltos.slack.com/join/shared_invite/zt-1p9fubv9v-C_N2r~v~v~v~v~v~v~v~v" target="_blank" class="bg-white text-[#003366] px-12 py-5 rounded-full font-bold text-lg hover:scale-105 transition-all shadow-2xl">
-                Jump into Slack
-            </a>
+            <Button
+                cta="Jump into Slack"
+                url="https://projectsveltos.slack.com/join/shared_invite/zt-1p9fubv9v-C_N2r~v~v~v~v~v~v~v~v"
+                target="_blank"
+                type="primary"
+                color="white"
+                iconName="arrow"
+            />
         </div>
     </Section>
 
@@ -116,10 +122,14 @@ const heroData = {
                     <p class="text-gray text-sm leading-relaxed">Join Slack and tell us what features you need next.</p>
                 </div>
             </div>
-            <a href="https://github.com/projectsveltos/sveltos/blob/main/CONTRIBUTING.md" target="_blank" class="inline-flex items-center gap-3 text-primary font-bold text-xl hover:translate-x-2 transition-transform">
-                Read Contributing Guide
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
+            <Button
+                cta="Read Contributing Guide"
+                url="https://github.com/projectsveltos/sveltos/blob/main/CONTRIBUTING.md"
+                target="_blank"
+                type="secondary"
+                color="black"
+                iconName="arrow"
+            />
         </div>
     </Section>
   </main>
