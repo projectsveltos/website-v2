@@ -14,19 +14,19 @@
   {
     "name": "Comcast",
     "url": "https://corporate.comcast.com",
-    "background": "#f4f4ff",
+    "background": "#FFFFFF",
     "logo": "https://corporate.comcast.com/media/img/original/2024/03/corporate_NewComcastLogo_16x9.png"
   },
   {
     "name": "Renault",
     "url": "https://www.renaultgroup.com",
-    "background": "#FFFFFF",
+    "background": "#000000",
     "logo": "/images/companies/renault.png"
   },
   {
     "name": "Clastix Labs",
     "url": "https://clastix.io/",
-    "background": "#f4f4ff",
+    "background": "#96afce",
     "logo": "/images/companies/clastix.png"
   },
   {
@@ -38,13 +38,13 @@
   {
     "name": "SparkFabrik",
     "url": "https://www.sparkfabrik.com",
-    "background": "#f4f4ff",
+    "background": "#ffd3d3",
     "logo":"/images/companies/SparkFabrikLogo.svg"
   },
     {
     "name": "Engineering Ingegneria Informatica",
     "url": "https://www.eng.it/it",
-    "background": "#FFFFFF",
-    "logo": ""
+    "background": "#000000",
+    "logo": "/images/companies/logo-eng.png"
   }
 ]
