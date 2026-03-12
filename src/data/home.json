@@ -174,7 +174,7 @@
                 "title": "Meet the Team",
                 "desc": "See who’s building Sveltos and join the contributor community.",
                 "linkText": "Our Team",
-                "linkUrl": "/about/"
+                "linkUrl": "#"
             },
             {
                 "icon": "/images/icons/list3.svg",
