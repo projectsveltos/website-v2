@@ -52,7 +52,7 @@ const heroData = {
         companies && <div class="flex flex-wrap columns-1 md:columns-2 lg:columns-3 pb-[5rem] gap-y-[2.5rem] gap-x-[2.5rem] md:gap-x-[1rem] md:gap-y-[3rem] justify-center">
           {
             companies.map((company) => (
-              <CarouselCard company={company} border />           
+              <CarouselCard company={company} border />
             ))
           }
 
@@ -67,11 +67,18 @@ const heroData = {
         <div class="flex-col mx-auto w-4/12 pt-[10rem] lg:w-8/12 lg:max-w-none text-center justify-center lg:py-[12rem] z-10">
           <h2>Want to list your company?</h2>
           <div class="justify-center flex pt-10">
-            <Button url="/join" type="secondary" color="black" cta="Join Sveltos"></Button>
+              <Button
+                url="https://github.com/projectsveltos/adopters/issues/1"
+                type="secondary"
+                color="black"
+                cta="Add your Company"
+                target="_blank"
+                rel="noopener noreferrer">
+              </Button>
           </div>
         </div>
       </div>
     </Section>
   </main>
-    
+
 </Layout>
