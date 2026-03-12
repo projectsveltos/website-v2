@@ -1,0 +1,116 @@
+---
+
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Collapse from '../components/Collapse.astro';
+import Hero from '../components/Hero.astro';
+
+const seoMetaData = {
+  description: 'Frequently asked questions about Sveltos: how it works, what add-on formats it supports, how Pull Mode operates, and how to get started with multi-cluster Kubernetes management.',
+  slug: 'faq/'
+};
+
+const heroData = {
+  headline: "Frequently Asked Questions",
+  subhead: 'Everything you need to know about Sveltos: deployment models, sync modes, GitOps integration, and more.',
+  heroImage: "/images/background-images/faq.png"
+}
+
+---
+
+
+<Layout title="Sveltos FAQ: Kubernetes Add-on Management Questions Answered" seo={seoMetaData}>
+  <header>
+    <Hero
+      variant="subpage"
+      headline={heroData.headline}
+      subhead={heroData.subhead}
+      heroImage={heroData.heroImage}
+      isWhiteBg={true}
+      isSmall={true}
+      imageWidthClass="lg:w-1/4"
+    />
+  </header>
+  <main>
+    <Section backgroundStyling="py-[3rem] px-[3rem]">
+      <div class="w-full">
+        <Collapse title="What is Project Sveltos?" collapseID="what-is-sveltos">
+          <div class="relative flex flex-wrap pb-8">
+            <p class="text-lg leading-relaxed text-gray">
+              Sveltos is an open-source Kubernetes add-on controller designed to simplify the deployment and management of Kubernetes add-ons and applications across hundreds of clusters. It provides declarative APIs to manage your entire fleet from a single management plane, whether on-prem, in the cloud, or in multi-tenant environments.
+            </p>
+          </div>
+        </Collapse>
+
+        <Collapse title="Is Sveltos a replacement for GitOps tools like Flux or Argo CD?" collapseID="gitops-replacement">
+          <div class="relative flex flex-wrap pb-8">
+            <p class="text-lg leading-relaxed text-gray">
+              No, Sveltos is designed to extend and enhance GitOps workflows, not replace them. While tools like Flux and Argo CD are excellent for managing individual clusters, Sveltos excels at distributing those configurations across a massive fleet. It integrates deeply with Flux, allowing you to use Flux sources to deploy resources to any number of managed clusters automatically.
+            </p>
+          </div>
+        </Collapse>
+
+        <Collapse title="What add-on formats does Sveltos support?" collapseID="supported-formats">
+          <div class="relative flex flex-wrap pb-8">
+            <p class="text-lg leading-relaxed text-gray mb-4">
+              Sveltos is extremely flexible and supports the most popular Kubernetes configuration formats:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 text-gray text-lg">
+              <li><strong>Helm Charts</strong>: Full lifecycle management of Helm releases.</li>
+              <li><strong>Raw YAML/JSON</strong>: Standard Kubernetes manifests.</li>
+              <li><strong>Kustomize</strong>: Native support for Kustomize overlays.</li>
+              <li><strong>Carvel ytt</strong>: Advanced YAML templating.</li>
+              <li><strong>Jsonnet</strong>: Data templating language for Kubernetes.</li>
+            </ul>
+          </div>
+        </Collapse>
+
+        <Collapse title="How does Sveltos handle configuration drift?" collapseID="drift-detection">
+          <div class="relative flex flex-wrap pb-8">
+            <p class="text-lg leading-relaxed text-gray">
+              Sveltos continuously monitors the state of deployed resources in your managed clusters. If a resource is modified or deleted by someone else, Sveltos detects this "drift." Depending on your configuration, it can either report the drift or automatically reconcile the resource back to your desired state, ensuring your fleet remains compliant.
+            </p>
+          </div>
+        </Collapse>
+
+        <Collapse title="What is Pull Mode and when should I use it?" collapseID="pull-mode">
+          <div class="relative flex flex-wrap pb-8">
+            <p class="text-lg leading-relaxed text-gray">
+              Pull Mode is designed for high-security, air-gapped, or restricted environments where the management cluster cannot directly reach managed clusters. In Pull Mode, a lightweight agent (Sveltos-agent) runs on each managed cluster and initiates outbound connections to poll the management cluster for updates. This eliminates the need for inbound firewall rules and works perfectly for clusters behind NAT or in private VPCs.
+            </p>
+          </div>
+        </Collapse>
+
+        <Collapse title="Can Sveltos react to cluster events?" collapseID="event-driven">
+          <div class="relative flex flex-wrap pb-8">
+            <p class="text-lg leading-relaxed text-gray">
+              Yes, Sveltos features a powerful event-driven framework. You can define "EventSources" using Lua or CEL to watch for specific conditions in a cluster (e.g., a new service being created). When an event is triggered, Sveltos can automatically deploy or update resources in response, allowing for sophisticated autonomous operations across your fleet.
+            </p>
+          </div>
+        </Collapse>
+
+        <Collapse title="How does Sveltos support multi-tenancy?" collapseID="multi-tenancy">
+          <div class="relative flex flex-wrap pb-8">
+            <p class="text-lg leading-relaxed text-gray">
+              Sveltos was built with multi-tenancy as a core principle. Using `ClusterProfile` (cluster-wide) and `Profile` (namespace-scoped) resources, platform teams can safely delegate configuration management to different teams. You can use label selectors to ensure that tenants only receive the configurations and add-ons they are authorized to manage, while the platform team maintains global control over core infrastructure.
+            </p>
+          </div>
+        </Collapse>
+
+        <Collapse title="How do I get started with Sveltos?" collapseID="how-to-start" isLast>
+          <div class="relative flex flex-wrap pb-8">
+            <p class="text-lg leading-relaxed text-gray mb-6">
+              Getting started is easy! You can install Sveltos on your management cluster using our Helm chart or a single YAML manifest. Once installed, you can start registering managed clusters and creating your first ClusterProfiles.
+            </p>
+            <div class="flex gap-4">
+              <a href="https://projectsveltos.github.io/sveltos/getting_started/install/install/" target="_blank" class="text-primary font-bold hover:underline">Read the Installation Guide</a>
+              <span class="text-gray-300">|</span>
+              <a href="/join/" class="text-primary font-bold hover:underline">Join our Slack for Help</a>
+            </div>
+          </div>
+        </Collapse>
+      </div>
+    </Section>
+  </main>
+    
+</Layout>

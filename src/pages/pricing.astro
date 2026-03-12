@@ -1,0 +1,287 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Hero from '../components/Hero.astro';
+import Button from '../components/Button.astro';
+import homeData from '../data/home.json';
+import MerchSection from '../components/MerchSection.astro';
+
+import pricing from '../data/pricing.json';
+
+const enterpriseImage = "/images/background-images/entreprise-support.svg";
+const enterprisePriceFormatted = pricing.enterprisePrice.toLocaleString();
+
+const seoMetaData = {
+  description: 'Sveltos Pricing: Open Source Free Forever with Enterprise-Grade Support. Tech Support, Pull Mode, and Priority Slack for your Kubernetes fleet.',
+  slug: 'pricing/'
+};
+
+const checkIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;s
+---
+
+<Layout title="Pricing and Support: Sveltos" seo={seoMetaData}>
+  <header>
+    <Hero
+      variant="standard"
+      isImageLeft={true}
+      heroImage={enterpriseImage}
+      headline="OSS Free Forever. Built for Enterprise."
+      subhead="Sveltos is and will always be open source. Our support plans are designed for teams that need production-grade reliability, security, and direct architectural guidance."
+      isWhiteBg={true}
+      isSmall={true}
+      imageWidthClass="lg:w-1/3"
+      buttonsData={[
+        {
+          text: "Contact Support",
+          link: "#contact",
+          type: "primary",
+          color: "blue"
+        }
+      ]}
+    />
+  </header>
+
+  <main>
+    <!-- PRICING TIERS -->
+    <Section sectionStyles="py-[3rem] px-[1.5rem] xl:px-[3.5rem] bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          <!-- OSS TIER -->
+          <div class="border border-borderGray rounded-3xl p-8 flex flex-col hover:shadow-lg transition-shadow">
+            <div class="mb-8">
+              <span class="text-xs font-bold bg-gray/10 text-gray px-3 py-1 rounded-full uppercase tracking-widest">Community</span>
+              <h2 class="text-3xl font-bold mt-4 mb-2">Open Source</h2>
+              <div class="text-4xl font-bold text-black">$0 <span class="text-lg text-gray font-normal">/ cluster</span></div>
+              <p class="text-gray mt-4">Free forever for everyone. No strings attached.</p>
+            </div>
+            <ul class="flex flex-col gap-4 mb-12 flex-1 text-black">
+              <li class="flex items-center gap-3">
+                <span class="text-teal font-bold" set:html={checkIcon} />
+                <span>All Sveltos Core Features</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-teal font-bold" set:html={checkIcon} />
+                <span>Community Slack Support</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-teal font-bold" set:html={checkIcon} />
+                <span>GitHub Issue Management</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-teal font-bold" set:html={checkIcon} />
+                <span>Public Documentation</span>
+              </li>
+            </ul>
+            <Button type="secondary" cta="Get Started Free" url="https://projectsveltos.github.io/sveltos/getting_started/install/install/" color="primary" />
+          </div>
+
+          <!-- ENTERPRISE SUPPORT TIER -->
+          <div class="border-2 border-primary rounded-3xl p-8 flex flex-col shadow-xl bg-primary/5 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-4 py-1 rounded-bl-xl uppercase tracking-widest">Recommended</div>
+            <div class="mb-8">
+              <span class="text-xs font-bold bg-primary text-white px-3 py-1 rounded-full uppercase tracking-widest">Enterprise</span>
+              <h2 class="text-3xl font-bold mt-4 mb-2">Enterprise Premium</h2>
+              <div class="text-4xl font-bold text-black">${enterprisePriceFormatted} <span class="text-lg text-gray font-normal">/ cluster / year</span></div>
+              <p class="text-gray mt-4">Production-grade support and security for mission-critical fleets.</p>
+            </div>
+            <ul class="flex flex-col gap-4 mb-12 flex-1 text-black font-semibold">
+              <li class="flex items-center gap-3">
+                <span class="text-primary" set:html={checkIcon} />
+                <div class="flex items-center gap-1.5">
+                    <span>Enterprise Premium Tech Support</span>
+                </div>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-primary" set:html={checkIcon} />
+                <div class="flex items-center gap-1.5">
+                    <span class="font-bold">Pull Mode</span>
+                    <a href="#pull-mode" class="text-primary no-underline font-bold hover:opacity-70">?</a>
+                </div>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-primary" set:html={checkIcon} />
+                <span>Proactive Design Guidance</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-primary" set:html={checkIcon} />
+                <span>Priority Slack Channel</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-primary" set:html={checkIcon} />
+                <span>SLA-backed Response Times</span>
+              </li>
+            </ul>
+            <div class="flex flex-col gap-3">
+              <Button type="primary" cta="Get Enterprise Support" url="#contact" color="blue" />
+              <Button type="secondary" cta="Book a Demo" url="https://cal.com/gianluca-mardente-nuclsu/30min" color="primary" />
+            </div>
+          </div>
+        </div>
+
+        <!-- CUSTOM DEV -->
+        <div class="mt-12 bg-taupe/20 border border-borderGray rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="max-w-xl text-center md:text-left">
+            <h3 class="text-xl font-bold text-black mb-2">Need Custom Development?</h3>
+            <p class="text-gray m-0">Requiring a specific integration, custom addon, or dedicated feature? We offer custom development services tailored to your roadmap.</p>
+          </div>
+          <Button type="secondary" cta="Request a Quote" url="#contact" color="black" />
+        </div>
+      </div>
+    </Section>
+
+    <!-- PULL MODE EXPLAINER -->
+    <Section id="pull-mode" sectionStyles="py-[3rem] px-[1.5rem] xl:px-[3.5rem] bg-background">
+      <div class="max-w-5xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+        <div class="lg:w-1/2">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-primary tag block m-0">Security & Architecture</span>
+            <span class="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-primary/20">Premium Feature</span>
+          </div>
+          <h2 class="text-4xl mb-6 leading-tight">Secure High-Security and Air-Gapped Environments</h2>
+          <p class="text-lg text-gray mb-8">
+            Traditional fleet management often requires the management cluster to have direct network access to every managed cluster. Pull Mode is designed specifically for air-gapped security and restricted networks.
+          </p>
+          <div class="grid grid-cols-1 gap-8">
+            <div class="flex gap-4 items-start">
+              <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-borderGray">
+                <span class="text-primary font-bold text-xl">1</span>
+              </div>
+              <div>
+                <strong class="text-xl text-black block mb-2">Zero Inbound Connectivity</strong>
+                <p class="text-[0.95rem] text-gray m-0 leading-relaxed">
+                  In Pull Mode, the Sveltos agent runs within the managed cluster and initiates all communication. This eliminates the need for any inbound VPNs, SSH tunnels, or open firewall ports. If your cluster can reach the management plane over HTTPS, it is managed.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-borderGray">
+                <span class="text-primary font-bold text-xl">2</span>
+              </div>
+              <div>
+                <strong class="text-xl text-black block mb-2">Air-gapped & Restricted Networks</strong>
+                <p class="text-[0.95rem] text-gray m-0 leading-relaxed">
+                  Designed for air-gapped, edge, and restricted environments. Whether it's a retail store, a vehicle, or a high-security private cloud, Secure Pull Mode ensures consistent configuration delivery without compromising network security policies.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-borderGray">
+                <span class="text-primary font-bold text-xl">3</span>
+              </div>
+              <div>
+                <strong class="text-xl text-black block mb-2">Scalability & Resilience</strong>
+                <p class="text-[0.95rem] text-gray m-0 leading-relaxed">
+                  Sveltos handles thousands of clusters polling efficiently. Even if the management cluster is temporarily unavailable, managed clusters continue to operate with their last known state, re-syncing automatically when the connection is restored.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/2 min-h-[400px]">
+          <div class="text-center">
+            <img src="/images/background-images/pullmode.png" alt="Pull Mode " class="w-full h-auto " />
+          </div>
+        </div>
+      </div>
+    </Section>
+
+    <!-- DONATIONS SECTION -->
+    <Section sectionStyles="py-[2rem] px-[1.5rem] xl:px-[3.5rem] bg-taupe/10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-red-50 text-red-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          Support the Project
+        </div>
+        <h2 class="text-4xl font-bold mb-6">Sveltos Relies on Your Donations</h2>
+        <p class="text-xl text-gray mb-10 max-w-2xl mx-auto leading-relaxed">
+          As a pure Open Source project, we rely on community donations to keep Sveltos alive, active, and independent. Your support directly funds development, maintenance, and community initiatives.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <Button type="primary" cta="Donate on GitHub Sponsors" url="https://github.com/sponsors/projectsveltos" color="blue" />
+          <Button type="secondary" cta="Donate via OpenCollective" url="https://opencollective.com/projectsveltos" color="primary" />
+        </div>
+      </div>
+    </Section>
+
+    <!-- MERCH SECTION -->
+    <MerchSection />
+
+    <!-- FINAL CTA SECTION -->
+    <Section sectionStyles="py-[3rem] px-[1.5rem] xl:px-[3.5rem] bg-black text-white overflow-hidden relative">
+      <div class="absolute inset-0 opacity-40">
+        <img src="/images/background-images/secure-fleet-cta.png" alt="Secure Fleet Background" class="w-full h-full object-cover" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+      
+      <div class="max-w-6xl mx-auto relative z-10 flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-2/3">
+          <span class="tag bg-primary text-white border-none block mb-4 w-fit">Enterprise Ready</span>
+          <h2 class="text-white text-3xl md:text-4xl font-bold mb-6 leading-tight italic">
+            Secure your <span class="text-primary italic">Kubernetes Fleet</span>
+          </h2>
+          <p class="text-white/80 text-lg leading-relaxed mb-8 max-w-2xl">
+            Sveltos is designed for high-security, air-gapped, and regulatory-compliant environments. Get the support you need to manage your fleet with confidence.
+          </p>
+          <div class="flex flex-wrap gap-6">
+            <a href="#contact" class="bg-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all shadow-2xl shadow-primary/40">
+              Start Your Enquiry
+            </a>
+            <a href="https://cal.com/gianluca-mardente-nuclsu/30min" target="_blank" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all">
+              Book a Deep Dive
+            </a>
+          </div>
+        </div>
+        <div class="lg:w-1/2 flex justify-center hidden lg:flex">
+            <div class="relative">
+                <div class="absolute inset-0 bg-primary/20 blur-[100px] rounded-full"></div>
+                <img src="/images/background-images/pullmode.png" alt="Sveltos Security" class="w-full max-w-md h-auto relative z-10 drop-shadow-2xl" />
+            </div>
+        </div>
+      </div>
+    </Section>
+
+    <!-- CONTACT SECTION -->
+    <Section id="contact" sectionStyles="py-[4rem] px-[1.5rem] xl:px-[3.5rem] bg-white">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <span class="tag text-primary block mb-2 mx-auto w-fit">Contact Us</span>
+        <h2 class="mb-4 text-4xl font-bold">How can we help?</h2>
+        <p class="text-gray text-lg leading-relaxed">
+          Fill out the form below and our technical team will get back to you within 24 hours.<br/>
+          For direct inquiries, email <a href="mailto:sales@projectsveltos.io" class="text-primary font-semibold hover:underline">sales@projectsveltos.io</a> or <a href="mailto:support@projectsveltos.io" class="text-primary font-semibold hover:underline">support@projectsveltos.io</a>.
+        </p>
+      </div>
+      <div class="max-w-2xl mx-auto border border-borderGray rounded-[2rem] p-8 md:p-12 shadow-sm">
+        <form class="flex flex-col gap-6" action="#" method="POST">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex flex-col gap-2">
+              <label for="name" class="text-[0.875rem] font-semibold text-black">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required class="w-full border border-borderGray rounded-xl px-4 py-3 text-[0.9rem] focus:outline-none focus:border-primary transition-colors" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="email" class="text-[0.875rem] font-semibold text-black">Email</label>
+              <input type="email" id="email" name="email" placeholder="john@company.com" required class="w-full border border-borderGray rounded-xl px-4 py-3 text-[0.9rem] focus:outline-none focus:border-primary transition-colors" />
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="interest" class="text-[0.875rem] font-semibold text-black">Interest</label>
+            <select id="interest" name="interest" class="w-full border border-borderGray rounded-xl px-4 py-3 text-[0.9rem] focus:outline-none focus:border-primary transition-colors bg-white">
+              <option value="enterprise">Enterprise Support (${enterprisePriceFormatted}/cluster)</option>
+              <option value="custom">Custom Development Quote</option>
+              <option value="demo">Live Product Demo</option>
+              <option value="other">Other Inquiry</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="message" class="text-[0.875rem] font-semibold text-black">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your fleet..." rows="5" required class="w-full border border-borderGray rounded-xl px-4 py-3 text-[0.9rem] focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+          </div>
+          <div class="flex justify-center mt-4">
+            <button type="submit" class="bg-primary text-white px-12 py-4 rounded-full font-bold text-[1rem] transition-all shadow-lg hover:opacity-90">
+              Send Enquiry
+            </button>
+          </div>
+        </form>
+      </div>
+    </Section>
+  </main>
+</Layout>

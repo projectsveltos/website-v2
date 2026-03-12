@@ -1,0 +1,73 @@
+---
+import Button from '../components/Button.astro';
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Hero from '../components/Hero.astro';
+
+import heroImage from '../assets/about/aboutHeroImage.png';
+
+const seoMetaData = {
+  description: 'Learn about Sveltos: the open-source Kubernetes add-on operator that simplifies GitOps-driven fleet management, multi-cluster configuration, and policy enforcement across hybrid and multicloud environments.',
+  slug: 'about/'
+};
+
+const heroData = {
+  headline: "About Sveltos",
+  subhead: 'Learn how Sveltos helps platform teams manage Kubernetes add-ons, configs, and policies at scale.',
+  heroImage: heroImage
+}
+
+---
+
+<Layout title="About Sveltos: The Team and Mission" seo={seoMetaData}>
+  <header>
+    <Hero
+      variant="subpage"
+      headline="About Sveltos"
+      subhead="Built by enthusiasts, designed for the Kubernetes community. Learn about the team and mission behind Sveltos."
+      heroImage={heroImage}
+      isWhiteBg={true}
+      isSmall={true}
+      imageWidthClass="lg:w-1/4"
+    />
+  </header>
+  <main>
+    <Section sectionStyles="py-[5rem] px-[1.5rem] lg:px-[5rem] max-w-5xl mx-auto" isFirst>
+      <div class="flex flex-col gap-12">
+        <div>
+          <h2 class="text-3xl font-bold mb-6">Our Mission</h2>
+          <p class="text-xl leading-relaxed text-gray">
+            Sveltos was born from the need to simplify Kubernetes fleet management without the complexity and overhead of legacy tools. Our mission is to provide an open-source, extensible, and lightweight platform that empowers platform teams to manage add-ons and policies consistently across any number of clusters.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Community Focused</h3>
+            <p class="text-lg leading-relaxed text-gray">
+              We believe in the power of the community. Sveltos is and will always be open-source. We strive to maintain a transparent roadmap and encourage contributions from developers and operators worldwide.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Scalability First</h3>
+            <p class="text-lg leading-relaxed text-gray">
+              Whether you have 5 clusters or 5,000, Sveltos is designed to handle the scale. With features like Pull Mode and event-driven automation, we ensure your fleet remains in the desired state, regardless of network constraints.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-primary/5 rounded-3xl p-10 border border-primary/10">
+          <h3 class="text-2xl font-bold mb-4">Meet the Maintainers</h3>
+          <p class="text-lg leading-relaxed text-gray mb-6">
+            Sveltos is maintained by a dedicated group of Kubernetes experts and open-source advocates. We are passionate about streamlining cloud-native operations and building tools that developers love to use.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <Button url="https://github.com/projectsveltos" type="taupe" color="black" cta="Follow us on GitHub" iconName="github"></Button>
+            <Button url="/join/" type="primary" color="teal" cta="Join our Community"></Button>
+          </div>
+        </div>
+      </div>
+    </Section>
+  </main>
+</Layout>
+ 

@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Hero from '../components/Hero.astro';
+import homeData from '../data/home.json';
+import heroImage from '../assets/use-cases/useCasesHero.png';
+
+const page = homeData;
+
+const seoMetaData = {
+  description: 'Explore real-world use cases for Sveltos: from hybrid multicloud operations to fleet-wide GitOps delivery and multi-tenant platform automation.',
+  slug: 'use-cases/'
+};
+
+---
+
+<Layout title="Sveltos Use Cases: Real-World Kubernetes Fleet Management" seo={seoMetaData}>
+  <header>
+    <Hero
+      variant="subpage"
+      headline="Sveltos Use Cases"
+      subhead="Discover how Sveltos solves complex Kubernetes management challenges across diverse environments and scales."
+      heroImage={heroImage}
+      isWhiteBg={true}
+      isSmall={true}
+      imageWidthClass="lg:w-1/4"
+    />
+  </header>
+  <main>
+    <Section sectionStyles="py-[5rem] px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] lg:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem]">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {page.useCases.cards.map(({ icon, title, desc }) => (
+            <div class="bg-white border border-[#e8e8e8] rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col gap-4">
+              <div class="text-4xl">{icon}</div>
+              <h3 class="text-xl font-bold text-black">{title}</h3>
+              <p class="text-gray leading-relaxed text-lg m-0">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Section>
+  </main>
+</Layout>

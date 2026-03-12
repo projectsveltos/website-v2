@@ -1,0 +1,321 @@
+{
+    "settings": {
+        "documentationUrl": "https://projectsveltos.github.io/sveltos/"
+    },
+    "hero": {
+        "headline": "Maintain consistent configuration <br/>and policies across Kubernetes fleet",
+        "subhead": "Open source Kubernetes controller for consistent configurations, policies, and add-ons across all your clusters.",
+        "buttons": [
+            {
+                "text": "Get Started (Open Source)",
+                "link": "https://projectsveltos.github.io/sveltos/getting_started/install/install/",
+                "color": "primary",
+                "type": "primary",
+                "hasArrowIcon": false
+            },
+            {
+                "text": "Star us",
+                "link": "https://github.com/projectsveltos/sveltos",
+                "color": "white",
+                "type": "secondary",
+                "iconName": "github"
+            }
+        ]
+    },
+    "oss": {
+        "tag": "Features",
+        "image": "/images/background-images/oss.svg",
+        "heading": "Orchestrating deployments across your Kubernetes fleet",
+        "features": [
+            {
+                "icon": "/images/icons/k8s.svg",
+                "title": "Orchestrated Deployment Order",
+                "desc": "Deploy custom resources in your defined order. Ensure deployments are predictable and controlled across every cluster.",
+                "image": "https://projectsveltos.github.io/sveltos/main/assets/helm_chart_order.gif",
+                "detail": "Sveltos intuitively understands dependencies. You can define precisely which Helm charts or Kubernetes YAMLs must be deployed first, preventing race conditions and ensuring complex stateful applications bootstrap correctly every time."
+            },
+            {
+                "icon": "/images/icons/formats.svg",
+                "title": "Powerful Templating",
+                "desc": "Represent add-ons as templates and let Sveltos automatically inject cluster-specific details for consistent deployments.",
+                "image": "https://projectsveltos.github.io/sveltos/main/assets/templates.png",
+                "detail": "Write your manifests once. Sveltos dynamically patches them at deployment time using cluster labels, annotations, or information retrieved directly from the management cluster, reducing copy-paste errors and configuration drift."
+            },
+            {
+                "icon": "/images/icons/eventdriven.svg",
+                "title": "Multitenancy",
+                "desc": "Designed for multitenancy from the beginning. Use ClusterProfile and Profile resources for complete isolation or tenant sharing.",
+                "image": "https://projectsveltos.github.io/sveltos/main/assets/Sveltos_Profile_ClusterProfile.jpg",
+                "detail": "Strictly partition your managed clusters across different teams. Sveltos ensures tenant configurations cannot conflict, applying rigorous RBAC policies and resource quotas seamlessly across your distributed infrastructure."
+            },
+            {
+                "icon": "/images/icons/eventdriven.svg",
+                "title": "Event-Driven Automation",
+                "desc": "Deploy add-ons and applications in response to specific events using Lua or CEL to adapt dynamically.",
+                "image": "https://projectsveltos.github.io/sveltos/main/assets/events.png",
+                "detail": "Don't just deploy statically; react to cluster state. Write custom Lua or CEL scripts to detect when new nodes join, specific pods crash, or custom metrics trigger, and automatically deploy remediation manifests or scaling workloads."
+            },
+            {
+                "icon": "/images/icons/open-source.svg",
+                "title": "Observability",
+                "desc": "Get notifications through Slack, Teams, Discord, WebEx, Telegram, SMTP, or Kubernetes events.",
+                "image": "https://projectsveltos.github.io/sveltos/main/assets/show_resources.png",
+                "detail": "Stay informed about the state of your fleet. Sveltos natively integrates with major communication platforms to broadcast deployment statuses, drift detections, and policy violations directly to your team's preferred channels."
+            },
+            {
+                "icon": "/images/icons/close.svg",
+                "title": "Pull Mode",
+                "desc": "Deploy add-ons in restricted environments; clusters behind firewalls, air-gapped setups, and edge environments.",
+                "image": "https://projectsveltos.github.io/sveltos/main/assets/sveltos_pull_mode.png",
+                "detail": "Secure your management plane by eliminating inbound connections. In Pull Mode, a lightweight agent in the managed cluster securely reaches out to the management cluster, making it ideal for edge devices and zero-trust networks."
+            },
+            {
+                "icon": "/images/icons/k8s.svg",
+                "title": "Progressive Rollouts",
+                "desc": "Perform phased rollouts of cluster configurations. Define once, then list deployment stages in order.",
+                "image": "https://projectsveltos.github.io/sveltos/main/assets/sveltos-promotion.gif",
+                "detail": "Minimize blast radius by staging deployments. Roll out changes to your dev clusters first, then staging, and finally production. Sveltos pauses automatically if a stage fails, ensuring fleet-wide stability."
+            }
+        ],
+        "buttons": [
+            {
+                "text": "Explore all features",
+                "url": "https://projectsveltos.github.io/sveltos/",
+                "type": "primary",
+                "color": "primary"
+            },
+            {
+                "text": "View on GitHub",
+                "url": "https://github.com/projectsveltos/sveltos",
+                "type": "secondary",
+                "color": "black",
+                "iconName": "github"
+            }
+        ]
+    },
+    "enterprise": {
+        "tag": "Pull Mode & Enterprise",
+        "image": "/images/background-images/entreprise-support.svg",
+        "heading": "Secure management without exposing your clusters",
+        "bullets": [
+            {
+                "title": "Agent-initiated Pull Mode",
+                "text": "Sveltos agent connects outbound to the management plane. No need to open inbound ports or expose API servers."
+            },
+            {
+                "title": "Air-Gapped & Edge Ready",
+                "text": "Perfect for clusters behind strict firewalls, air-gapped setups, and highly regulated edge environments."
+            }
+        ],
+        "buttons": [
+            {
+                "text": "Get Pull Mode (Enterprise)",
+                "url": "/pricing/",
+                "type": "secondary",
+                "color": "black"
+            },
+            {
+                "text": "Enterprise Offering",
+                "url": "/pricing/",
+                "type": "secondary",
+                "color": "black"
+            }
+        ]
+    },
+    "howItWorks": {
+        "tag": "How It Works",
+        "heading": "From management cluster to every managed cluster",
+        "steps": [
+            {
+                "step": "01",
+                "title": "Label-Based Targeting",
+                "desc": "Select clusters using Kubernetes labels. ClusterProfiles and Profiles determine who gets what."
+            },
+            {
+                "step": "02",
+                "title": "ClusterProfiles / Profiles",
+                "desc": "Define desired add-ons, configurations, and policies declaratively as CRDs."
+            },
+            {
+                "step": "03",
+                "title": "Sync Modes",
+                "desc": "Choose OneTime, Continuous, or ContinuousWithDriftDetection to match your operational needs."
+            },
+            {
+                "step": "04",
+                "title": "Deployment Phases",
+                "desc": "Stage deployments across clusters with ordering and dependency control built in."
+            },
+            {
+                "step": "05",
+                "title": "Management Cluster",
+                "desc": "A single management cluster orchestrates and distributes configs to all registered clusters."
+            },
+            {
+                "step": "06",
+                "title": "Managed Clusters",
+                "desc": "Each managed cluster runs a lightweight Sveltos agent and receives state from the management plane."
+            }
+        ]
+    },
+    "joinUs": {
+        "tag": "Join Us",
+        "heading": "Be part of the Sveltos community",
+        "cards": [
+            {
+                "icon": "/images/icons/list1.svg",
+                "title": "Merch Store",
+                "desc": "Grab official Sveltos swag: stickers, tees, and more.",
+                "linkText": "Shop Now",
+                "linkUrl": "#"
+            },
+            {
+                "icon": "/images/icons/list2.svg",
+                "title": "Meet the Team",
+                "desc": "See who’s building Sveltos and join the contributor community.",
+                "linkText": "Our Team",
+                "linkUrl": "/about/"
+            },
+            {
+                "icon": "/images/icons/list3.svg",
+                "title": "Book a Session",
+                "desc": "Schedule a live walkthrough or architecture review.",
+                "linkText": "Book Now",
+                "linkUrl": "#"
+            }
+        ]
+    },
+    "pullModeComparison": {
+        "tag": "Push vs Pull",
+        "heading": "Choose the right sync architecture",
+        "comparisonLabel": "Push vs Pull at a glance",
+        "comparison": [
+            {
+                "mode": "Push",
+                "icon": "/images/icons/close.svg",
+                "desc": "Management cluster pushes configs directly. Requires network access to managed clusters.",
+                "recommended": false
+            },
+            {
+                "mode": "Pull",
+                "icon": "/images/icons/open-source.svg",
+                "desc": "Agent in managed cluster polls management cluster. Only outbound connections needed.",
+                "recommended": true
+            }
+        ]
+    },
+    "pricing": {
+        "tag": "Pricing",
+        "heading": "Find the right plan for your fleet",
+        "subhead": "Sveltos is free and open source. For enterprise features like Pull Mode, priority support, and SLAs: get in touch.",
+        "form": {
+            "heading": "Contact Us",
+            "fields": [
+                {
+                    "name": "name",
+                    "label": "Full Name",
+                    "type": "text",
+                    "placeholder": "John Doe"
+                },
+                {
+                    "name": "email",
+                    "label": "Email",
+                    "type": "email",
+                    "placeholder": "john@company.com"
+                },
+                {
+                    "name": "company",
+                    "label": "Company",
+                    "type": "text",
+                    "placeholder": "Acme Inc."
+                },
+                {
+                    "name": "message",
+                    "label": "Message",
+                    "type": "textarea",
+                    "placeholder": "Tell us about your fleet and needs..."
+                }
+            ],
+            "submitText": "Send Message"
+        }
+    },
+    "useCases": {
+        "tag": "Use Cases",
+        "heading": "Real scenarios, battle-tested at scale",
+        "cards": [
+            {
+                "icon": "☁️",
+                "title": "Hybrid Multicloud Operations",
+                "desc": "Manage clusters across AWS, GCP, Azure, and on-prem from a single management plane."
+            },
+            {
+                "icon": "📦",
+                "title": "Fleet-Wide Add-on Delivery",
+                "desc": "Rollout Helm charts, operators, and policies consistently across every cluster."
+            },
+            {
+                "icon": "🗄️",
+                "title": "Database Deployment Automation",
+                "desc": "Automate stateful workload delivery with ordered deployment phases and drift detection."
+            },
+            {
+                "icon": "📨",
+                "title": "NATS Messaging Clusters",
+                "desc": "Deploy and sync NATS clusters across distributed environments using event-driven triggers."
+            },
+            {
+                "icon": "🌐",
+                "title": "API Gateway Workflows",
+                "desc": "Stage and manage API gateways and service mesh configs with fine-grained cluster targeting."
+            },
+            {
+                "icon": "🔄",
+                "title": "GitOps Integration",
+                "desc": "Combine Sveltos with Flux or Argo to deliver fully declarative, Git-driven fleet management."
+            },
+            {
+                "icon": "🏢",
+                "title": "Multi-Tenant Platforms",
+                "desc": "Isolate and manage cluster configurations per tenant with Profiles and label selectors."
+            }
+        ]
+    },
+    "integrations": {
+        "tag": "Integrations & Ecosystem",
+        "heading": "Works with the tools you already use",
+        "categories": [
+            {
+                "category": "GitOps",
+                "items": [
+                    "Flux CD – Native templating and GitOps source integration",
+                    "Argo CD – Pair Argo apps with Sveltos fleet management",
+                    "Git-based config sources with dynamic template rendering"
+                ]
+            },
+            {
+                "category": "Events & Messaging",
+                "items": [
+                    "CloudEvents – React to cluster events and trigger deployments",
+                    "NATS – Event-driven pipeline orchestration across fleets",
+                    "Kubernetes Event APIs – Built-in event watchers"
+                ]
+            },
+            {
+                "category": "Cluster & Runtime Types",
+                "items": [
+                    "EKS, GKE, AKS, RKE2",
+                    "K3s, vCluster, OpenShift",
+                    "On-prem, bare-metal, edge clusters"
+                ]
+            },
+            {
+                "category": "CLIs & Dashboards",
+                "items": [
+                    "sveltosctl – Powerful CLI for fleet inspection and control",
+                    "Kubernetes Dashboard compatible",
+                    "Custom metrics & health views via Prometheus/Grafana"
+                ]
+            }
+        ]
+    }
+}

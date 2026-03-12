@@ -1,0 +1,79 @@
+---
+import Button from './Button.astro';
+
+import { DeploymentFlow } from './DeploymentFlow';
+
+const { 
+  headline, 
+  subhead, 
+  buttonsData = [], 
+  heroImage, 
+  variant = 'main',
+  isImageLeft = false,
+  bottomMargin = '',
+  isWhiteBg = false,
+  isSmall = false,
+  imageWidthClass = "lg:w-2/5"
+} = Astro.props;
+
+const containerClasses = `container flex flex-col flex-wrap mx-auto px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] lg:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem] ${bottomMargin}`;
+const bgClass = isWhiteBg ? 'bg-white text-black border-b border-borderGray' : 'bg-black text-white';
+const paddingClass = isSmall ? 'py-2 lg:py-4' : 'py-16 lg:py-24';
+const textClass = isWhiteBg ? 'text-black' : 'text-white';
+const subheadClass = isWhiteBg ? 'text-gray opacity-100' : 'text-white opacity-80';
+---
+<div class={`${bgClass} ${paddingClass} overflow-hidden relative`}>
+  <div class={containerClasses}>
+  {variant === 'main' ? (
+    <div class="flex flex-col md:flex-row items-center relative z-10 w-full">
+      <div class="w-full md:w-1/2 md:pr-[2rem] lg:pr-[4rem] mb-12 md:mb-0">
+        <h1 class={`leading-[1.1] mb-6 ${textClass} text-[2.5rem] sm:text-[3rem] lg:text-[4rem] tracking-tight`} set:html={headline}></h1>
+        <p class={`${subheadClass} text-lg md:text-xl font-sans max-w-lg leading-relaxed mb-8`} set:html={subhead} />
+        {buttonsData.length > 0 && (
+          <div class="flex flex-wrap gap-4 mt-6">
+           { buttonsData.map((button) => (
+              <Button type={button.type} url={button.link} color={button.color || (isWhiteBg ? 'black' : 'white')} cta={button.text} icon={button.icon} background={button.type === 'primary' ? 'primary' : 'transparent'} />
+            ))}
+          </div>
+        )}
+      </div>
+      <div class="w-full md:w-1/2 relative h-[480px] lg:h-[550px] bg-transparent">
+          <DeploymentFlow client:only="react" />
+      </div>
+    </div>
+  ) : variant === 'blog' ? (
+    <div class={`w-full flex flex-col items-center justify-center ${paddingClass} text-center`}>
+      <div class="max-w-4xl mx-auto">
+        <h1 class={`leading-[115%] mb-8 text-[3rem] sm:text-[3.5rem] lg:text-[4.5rem] ${textClass} tracking-tight font-display`}>{headline}</h1>
+        <p class={`${subheadClass} text-xl sm:text-2xl lg:text-3xl font-sans font-medium leading-relaxed max-w-2xl mx-auto`} set:html={subhead} />
+        {buttonsData.length > 0 && (
+          <div class="flex flex-wrap justify-center gap-6 mt-12">
+           { buttonsData.map((button) => (
+              <Button type={button.type} url={button.link} color={button.color || (isWhiteBg ? 'black' : 'white')} cta={button.text} icon={button.icon} />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  ) : (
+    <div class={`w-full flex flex-col items-center justify-between ${paddingClass} gap-10 ${isImageLeft ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
+      <div class={`w-full ${imageWidthClass === 'lg:w-2/5' ? 'lg:w-3/5' : 'lg:w-3/4'}`}>
+        <h1 class={`leading-[115%] mb-6 text-[2.5rem] sm:text-[3rem] lg:text-[3.5rem] ${textClass} tracking-tight`}>{headline}</h1>
+        <p class={`${subheadClass} text-lg sm:text-xl lg:text-2xl max-w-2xl font-sans font-medium leading-relaxed`} set:html={subhead} />
+        {buttonsData.length > 0 && (
+          <div class="flex flex-wrap gap-4 mt-8">
+           { buttonsData.map((button) => (
+              <Button type={button.type} url={button.link} color={button.color || (isWhiteBg ? 'black' : 'white')} cta={button.text} icon={button.icon} />
+            ))}
+          </div>
+        )}
+      </div>
+      {heroImage && (
+        <div class={`w-full ${imageWidthClass} flex justify-center lg:justify-end`}>
+          <img src={typeof heroImage === 'string' ? heroImage : heroImage.src} alt={headline} class="max-h-full h-auto rounded-2xl  transition-transform duration-500" />
+        </div>
+      )}
+    </div>
+  )}
+  </div>
+</div>
