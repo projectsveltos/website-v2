@@ -13,8 +13,8 @@
   },
   {
     "name": "Comcast",
-    "url": "https://comcast.com",
-    "background": "#FFFFFF",
+    "url": "https://corporate.comcast.com",
+    "background": "#f4f4ff",
     "logo": "https://corporate.comcast.com/media/img/original/2024/03/corporate_NewComcastLogo_16x9.png"
   },
   {
@@ -26,19 +26,25 @@
   {
     "name": "Clastix Labs",
     "url": "https://clastix.io/",
-    "background": "#FFFFFF",
+    "background": "#f4f4ff",
     "logo": "/images/companies/clastix.png"
   },
   {
     "name": "Software Craftsman",
     "url": "https://craftsman-software.com/",
-    "background": "#cfe7fc",
+    "background": "#FFFFFF",
     "logo": "/images/companies/craaftsman.svg"
   },
   {
     "name": "SparkFabrik",
     "url": "https://www.sparkfabrik.com",
-    "background": "#FFFFFF",
+    "background": "#f4f4ff",
     "logo":"/images/companies/SparkFabrikLogo.svg"
+  },
+    {
+    "name": "Engineering Ingegneria Informatica",
+    "url": "https://www.eng.it/it",
+    "background": "#FFFFFF",
+    "logo": ""
   }
 ]
