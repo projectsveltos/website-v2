@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Hero from '../components/Hero.astro';
+import Button from '../components/Button.astro';
+import pricing from '../data/pricing.json';
+
+const enterprisePriceFormatted = pricing.enterprisePrice.toLocaleString();
+const contactHeroImage = "/images/background-images/adopters.png"; // Placeholder or suitable image
+
+const seoMetaData = {
+  description: 'Contact the Sveltos team for enterprise support, custom development, or a live demo of our Kubernetes fleet management platform.',
+  slug: 'contact/'
+};
+
+const calComUrl = "https://cal.com/gianluca-mardente-nuclsu/30min";
+---
+
+<Layout title="Contact Us: Sveltos" seo={seoMetaData}>
+  <header>
+    <Hero
+      variant="standard"
+      isImageLeft={true}
+      heroImage={contactHeroImage}
+      headline="How can we help?"
+      subhead="Whether you need enterprise-grade support, a custom integration, or just want to see a live demo, our technical team is ready to assist."
+      isWhiteBg={true}
+      isSmall={true}
+      imageWidthClass="lg:w-1/4"
+    />
+  </header>
+
+  <main>
+    <!-- CONTACT OPTIONS -->
+    <Section sectionStyles="py-[4rem] px-[1.5rem] xl:px-[3.5rem] bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          
+          <!-- BOOK A DEMO / CALL -->
+          <div class="flex flex-col gap-8 bg-primary/5 rounded-[2.5rem] p-10 border border-primary/10 shadow-sm relative overflow-hidden">
+             <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl -mr-16 -mt-16"></div>
+             <div>
+                <span class="tag text-primary block mb-4">Book a Session</span>
+                <h2 class="text-4xl font-bold mb-6 text-black">Schedule a Live Demo</h2>
+                <p class="text-lg text-gray leading-relaxed mb-8">
+                  Want to see Sveltos in action? Book a 30-minute session with our founders to discuss your use case, see a live walkthrough, and get your technical questions answered.
+                </p>
+                <div class="flex flex-col gap-4">
+                  <Button 
+                    cta="Book a 30min Call" 
+                    url={calComUrl} 
+                    target="_blank" 
+                    type="primary" 
+                    color="blue" 
+                    iconName="arrow" 
+                  />
+                  <p class="text-sm text-gray flex items-center gap-2 mt-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Available slots today
+                  </p>
+                </div>
+             </div>
+             
+             <div class="border-t border-primary/10 pt-8 mt-4">
+                <h4 class="font-bold text-black mb-4">Direct Inquiry?</h4>
+                <div class="flex flex-col gap-3">
+                   <a href="mailto:support@projectsveltos.io" class="flex items-center gap-3 text-gray hover:text-primary transition-colors no-underline font-medium">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                      support@projectsveltos.io
+                   </a>
+                   <a href="mailto:sales@projectsveltos.io" class="flex items-center gap-3 text-gray hover:text-primary transition-colors no-underline font-medium">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                      sales@projectsveltos.io
+                   </a>
+                </div>
+             </div>
+          </div>
+
+          <!-- CONTACT FORM -->
+          <div class="flex flex-col gap-8">
+            <div>
+                <span class="tag text-primary block mb-4">General Inquiry</span>
+                <h3 class="text-3xl font-bold mb-6 text-black">Send us a message</h3>
+                <p class="text-gray mb-8">
+                  Have a specific question about features, pricing, or custom development? Fill out the form and we'll get back to you within 24 hours.
+                </p>
+            </div>
+            <form class="flex flex-col gap-6" action="#" method="POST">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex flex-col gap-2">
+                  <label for="name" class="text-[0.875rem] font-semibold text-black">Full Name</label>
+                  <input type="text" id="name" name="name" placeholder="John Doe" required class="w-full border border-borderGray rounded-xl px-4 py-3 text-[0.9rem] focus:outline-none focus:border-primary transition-colors shadow-sm" />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="email" class="text-[0.875rem] font-semibold text-black">Email</label>
+                  <input type="email" id="email" name="email" placeholder="john@company.com" required class="w-full border border-borderGray rounded-xl px-4 py-3 text-[0.9rem] focus:outline-none focus:border-primary transition-colors shadow-sm" />
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="interest" class="text-[0.875rem] font-semibold text-black">Interest</label>
+                <select id="interest" name="interest" class="w-full border border-borderGray rounded-xl px-4 py-3 text-[0.9rem] focus:outline-none focus:border-primary transition-colors bg-white shadow-sm">
+                  <option value="enterprise">Enterprise Support (${enterprisePriceFormatted}/cluster)</option>
+                  <option value="custom">Custom Development Quote</option>
+                  <option value="demo">Live Product Demo</option>
+                  <option value="other">Other Inquiry</option>
+                </select>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="message" class="text-[0.875rem] font-semibold text-black">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your fleet..." rows="5" required class="w-full border border-borderGray rounded-xl px-4 py-3 text-[0.9rem] focus:outline-none focus:border-primary transition-colors resize-none shadow-sm"></textarea>
+              </div>
+              <div class="flex mt-2">
+                <button type="submit" class="bg-primary text-white px-12 py-4 rounded-full font-bold text-[1.125rem] transition-all shadow-lg hover:opacity-90 hover:scale-105 active:scale-95">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </Section>
+  </main>
+</Layout>

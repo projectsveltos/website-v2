@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import logo from '../assets/navigation/logo-header.png';
 import close from '/images/icons/close.svg?raw';
 import hamburger from '/images/icons/hamburger.svg?raw';
+import Button from './Button.astro';
 
 const { links, socialLinks, documentationUrl } = Astro.props;
 
@@ -51,7 +52,7 @@ const year = date.getFullYear();
         </a>
       </li>
       <li class="ml-2">
-         <a href="/pricing/" class="bg-primary text-white border border-primary px-4 py-2 rounded-md text-[0.875rem] font-medium hover:bg-[#3d5ab8] transition-colors shadow-sm">Talk to an expert</a>
+         <Button type="primary" cta="Talk to us" url="/contact/" color="white" iconName="arrow" />
       </li>
     </ul>
   </div>
@@ -93,6 +94,12 @@ const year = date.getFullYear();
           <a class="flex items-center gap-2 text-[1.125rem] leading-[135%] font-bold tracking-[-0.0225rem] text-primary underline decoration-2 underline-offset-4 active:opacity-70 group" href={documentationUrl} target="_blank">
             Documentation
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </li>
+        <li class="mt-4 pt-6">
+          <a href="/contact/" class="flex items-center justify-center gap-2 w-full bg-primary text-white text-center py-3 rounded-xl font-bold hover:bg-primary/90 transition-all shadow-md group">
+            Talk to us
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
         </li>
       </ul>

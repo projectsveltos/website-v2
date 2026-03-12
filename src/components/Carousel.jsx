@@ -5,7 +5,7 @@ const Carousel = ({ companies }) => {
   const maxScrollWidth = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carousel = useRef(null);
-  const [movement, setMovement] = useState(400);
+  const [movement, setMovement] = useState(160); // lg:w-[9rem] is 144px. 160px allows for 16px gap.
 
   const movePrev = () => {
     if (currentIndex > 0) {

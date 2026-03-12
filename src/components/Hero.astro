@@ -32,7 +32,7 @@ const subheadClass = isWhiteBg ? 'text-gray opacity-100' : 'text-white opacity-8
         {buttonsData.length > 0 && (
           <div class="flex flex-wrap gap-4 mt-6">
            { buttonsData.map((button) => (
-              <Button type={button.type} url={button.link} color={button.color || (isWhiteBg ? 'black' : 'white')} cta={button.text} icon={button.icon} background={button.type === 'primary' ? 'primary' : 'transparent'} />
+              <Button type={button.type} url={button.link} color={button.color || (isWhiteBg ? 'black' : 'white')} cta={button.text} icon={button.icon} iconName={button.iconName} background={button.type === 'primary' ? 'primary' : 'transparent'} />
             ))}
           </div>
         )}
