@@ -8,7 +8,7 @@
         "buttons": [
             {
                 "text": "Get Started (Open Source)",
-                "link": "https://projectsveltos.github.io/sveltos/getting_started/install/install/",
+                "link": "https://projectsveltos.github.io/sveltos/latest/getting_started/install/install/",
                 "color": "primary",
                 "type": "primary",
                 "iconName": "arrow"
