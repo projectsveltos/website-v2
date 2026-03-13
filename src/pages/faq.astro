@@ -42,10 +42,25 @@ const heroData = {
           </div>
         </Collapse>
 
-        <Collapse title="Is Sveltos a replacement for GitOps tools like Flux or Argo CD?" collapseID="gitops-replacement">
+        <Collapse title="How do I get started with Sveltos?" collapseID="how-to-start" isLast>
+          <div class="relative flex flex-wrap pb-8">
+            <p class="text-lg leading-relaxed text-gray mb-6">
+              Getting started is easy! You can install Sveltos on your management cluster using our Helm chart or a single YAML manifest. Once installed, you can start registering managed clusters and creating your first ClusterProfiles.
+            </p>
+            <div class="flex gap-4">
+              <a href="https://projectsveltos.github.io/sveltos/latest/getting_started/install/quick_start/" target="_blank" class="text-primary font-bold hover:underline">Quick Start Guide</a>
+              <span class="text-gray-300">|</span>
+              <a href="https://projectsveltos.github.io/sveltos/latest/getting_started/install/install/" target="_blank" class="text-primary font-bold hover:underline">Installation Guide</a>
+              <span class="text-gray-300">|</span>
+              <a href="/join/" class="text-primary font-bold hover:underline">Join Slack for Help</a>
+            </div>
+          </div>
+        </Collapse>
+
+        <Collapse title="Is Sveltos a replacement for GitOps Controllers (ArgoCD, Flux)" collapseID="gitops-replacement">
           <div class="relative flex flex-wrap pb-8">
             <p class="text-lg leading-relaxed text-gray">
-              No, Sveltos is designed to extend and enhance GitOps workflows, not replace them. While tools like Flux and Argo CD are excellent for managing individual clusters, Sveltos excels at distributing those configurations across a massive fleet. It integrates deeply with Flux, allowing you to use Flux sources to deploy resources to any number of managed clusters automatically.
+              No. Sveltos is designed to extend and enhance GitOps workflows, not replace them. While tools like ArgoCD and Flux are excellent for managing individual clusters, Sveltos excels at distributing those configurations across a massive fleet. It integrates deeply with Flux, allowing you to use Flux sources to deploy resources to any number of managed clusters automatically.
             </p>
           </div>
         </Collapse>
@@ -65,10 +80,34 @@ const heroData = {
           </div>
         </Collapse>
 
+        <Collapse title="How does Sveltos support multi-tenancy?" collapseID="multi-tenancy">
+          <div class="relative flex flex-wrap pb-8">
+            <p class="text-lg leading-relaxed text-gray">
+              Sveltos was built with multi-tenancy as a core principle. Using <code>ClusterProfile</code> (cluster-wide) and <code>Profile</code> (namespace-scoped) resources, platform teams can safely delegate configuration management to different teams. You can use label selectors to ensure that tenants only receive the configurations and add-ons they are authorized to manage, while the platform team maintains global control over core infrastructure.
+            </p>
+          </div>
+        </Collapse>
+
+        <Collapse title="Can Sveltos react to cluster events?" collapseID="event-driven">
+          <div class="relative flex flex-wrap pb-8">
+            <p class="text-lg leading-relaxed text-gray">
+              Yes. Sveltos features a powerful event-driven framework. You can define "EventSources" using Lua or CEL to watch for specific conditions in a cluster (e.g., a new service being created). When an event is triggered, Sveltos can automatically deploy or update resources in response, allowing for sophisticated autonomous operations across your fleet.
+            </p>
+          </div>
+        </Collapse>
+
         <Collapse title="How does Sveltos handle configuration drift?" collapseID="drift-detection">
           <div class="relative flex flex-wrap pb-8">
             <p class="text-lg leading-relaxed text-gray">
               Sveltos continuously monitors the state of deployed resources in your managed clusters. If a resource is modified or deleted by someone else, Sveltos detects this "drift." Depending on your configuration, it can either report the drift or automatically reconcile the resource back to your desired state, ensuring your fleet remains compliant.
+            </p>
+          </div>
+        </Collapse>
+
+        <Collapse title="How does Sveltos perform progressive rollouts?" collapseID="drift-detection">
+          <div class="relative flex flex-wrap pb-8">
+            <p class="text-lg leading-relaxed text-gray">
+              The <code>ClusterPromotion</code> Custom Resource Definition (CRD) solves the challenge of performing phased rollouts of cluster configurations and add-ons managed by Sveltos. We can avoid creating and managing multiple <code>ClusterProfile</code> resources with the same content. Instead, we define the configuration once and list the deployment stages in order.
             </p>
           </div>
         </Collapse>
@@ -81,34 +120,6 @@ const heroData = {
           </div>
         </Collapse>
 
-        <Collapse title="Can Sveltos react to cluster events?" collapseID="event-driven">
-          <div class="relative flex flex-wrap pb-8">
-            <p class="text-lg leading-relaxed text-gray">
-              Yes, Sveltos features a powerful event-driven framework. You can define "EventSources" using Lua or CEL to watch for specific conditions in a cluster (e.g., a new service being created). When an event is triggered, Sveltos can automatically deploy or update resources in response, allowing for sophisticated autonomous operations across your fleet.
-            </p>
-          </div>
-        </Collapse>
-
-        <Collapse title="How does Sveltos support multi-tenancy?" collapseID="multi-tenancy">
-          <div class="relative flex flex-wrap pb-8">
-            <p class="text-lg leading-relaxed text-gray">
-              Sveltos was built with multi-tenancy as a core principle. Using `ClusterProfile` (cluster-wide) and `Profile` (namespace-scoped) resources, platform teams can safely delegate configuration management to different teams. You can use label selectors to ensure that tenants only receive the configurations and add-ons they are authorized to manage, while the platform team maintains global control over core infrastructure.
-            </p>
-          </div>
-        </Collapse>
-
-        <Collapse title="How do I get started with Sveltos?" collapseID="how-to-start" isLast>
-          <div class="relative flex flex-wrap pb-8">
-            <p class="text-lg leading-relaxed text-gray mb-6">
-              Getting started is easy! You can install Sveltos on your management cluster using our Helm chart or a single YAML manifest. Once installed, you can start registering managed clusters and creating your first ClusterProfiles.
-            </p>
-            <div class="flex gap-4">
-              <a href="https://projectsveltos.github.io/sveltos/getting_started/install/install/" target="_blank" class="text-primary font-bold hover:underline">Read the Installation Guide</a>
-              <span class="text-gray-300">|</span>
-              <a href="/join/" class="text-primary font-bold hover:underline">Join our Slack for Help</a>
-            </div>
-          </div>
-        </Collapse>
       </div>
     </Section>
   </main>
