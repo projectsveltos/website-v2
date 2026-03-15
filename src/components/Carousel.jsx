@@ -2,146 +2,72 @@ import React, { useState, useRef, useEffect } from 'react';
 import CarouselCard from './CarouselCard.jsx';
 
 const Carousel = ({ companies }) => {
-  const maxScrollWidth = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carousel = useRef(null);
-  const [movement, setMovement] = useState(160); // lg:w-[9rem] is 144px. 160px allows for 16px gap.
+  const movement = 352;
 
   const movePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prevState) => prevState - 1);
-    }
+    if (currentIndex > 0) setCurrentIndex(prev => prev - 1);
   };
 
   const moveNext = () => {
-    if (
-      carousel.current !== 0 &&
-      currentIndex + movement <= maxScrollWidth.current
-    ) {
-      setCurrentIndex((prevState) => prevState + 1);
+    if (companies && currentIndex < companies.length - 1) {
+      setCurrentIndex(prev => prev + 1);
     }
-  };
-
-  const isDisabled = (direction) => {
-    if (direction === 'prev') {
-      return currentIndex <= 0;
-    }
-
-    if (direction === 'next' && carousel.current !== null) {
-      return (
-        (movement * (currentIndex + 3)) >= maxScrollWidth.current
-      );
-    }
-
-    return false;
-  };
-
-  const [isDown, setIsDown] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-
-  const handleMouseDown = (e) => {
-    setIsDown(true);
-    setStartX(e.pageX - carousel.current.offsetLeft);
-    setScrollLeft(carousel.current.scrollLeft);
-  };
-
-  const handleMouseLeave = () => {
-    setIsDown(false);
-  };
-
-  const handleMouseUp = () => {
-    setIsDown(false);
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - carousel.current.offsetLeft;
-    const walk = (x - startX) * 2; // scroll-fast
-    carousel.current.scrollLeft = scrollLeft - walk;
   };
 
   useEffect(() => {
-    if (carousel !== null && carousel.current !== null) {
-      if (!isDown) {
-        carousel.current.scrollLeft = movement * currentIndex;
-      }
+    if (carousel.current) {
+      carousel.current.scrollTo({
+        left: currentIndex * movement,
+        behavior: 'smooth'
+      });
     }
-    const carouselWrapper = document.querySelectorAll('.carousel-wrapper')[0];
-    if (carouselWrapper) {
-      if (currentIndex > 0) {
-        carouselWrapper.classList.add('carousel-wrapper-left');
-      } else {
-        carouselWrapper.classList.remove('carousel-wrapper-left');
-      }
-    }
-  }, [currentIndex, isDown]);
-
-  useEffect(() => {
-    maxScrollWidth.current = carousel.current
-      ? carousel.current.scrollWidth - movement
-      : 0;
-  }, []);
+  }, [currentIndex]);
 
   return (
-    <div className="carousel my-12">
-      <div className="flex flex-wrap xl:justify-around container mx-auto mb-[3.5rem] px-[1.5rem] xl:px-[3rem]">
-        <div className="flex justify-start xl:items-center w-12/12 xl:w-1/2">
-          <h2 className="mr-[3rem] mb-0 text-[1.5rem] font-[500] leading-[125%]">
-            Trusted Across Cloud, Edge, and On Prem
-          </h2>
-          <div className="hidden xl:flex relative gap-[1rem]">
+    /* THE BACKGROUND FIX:
+       1. bg-[#F4F7FA] is a distinct light blue-gray.
+       2. w-screen + negative margins forces the background to hit both screen edges.
+    */
+    <section className="relative w-screen left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] bg-[#F4F7FA] py-20 my-16">
+      <div className="max-w-[1400px] mx-auto">
+        {/* Header */}
+        <div className="flex justify-between items-center mb-10 px-12">
+          <h2 className="text-3xl font-bold text-[#0D1B2A]">Trusted Partners</h2>
+          <div className="flex gap-4">
             <button
               onClick={movePrev}
-              className="w-[2rem] h-[2rem] flex items-center justify-center bg-taupe rounded-[1rem] text-center disabled:opacity-25 disabled:cursor-not-allowed transition-all ease-in-out duration-300"
-              disabled={isDisabled('prev')}
+              disabled={currentIndex === 0}
+              className="w-12 h-12 flex items-center justify-center bg-white border border-gray-200 rounded-full disabled:opacity-20 shadow-sm hover:border-[#0f52b9] transition-all"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
-                <path d="M8.5 1.5L2 8L8.5 14.5" stroke="#0D1B2A" stroke-width="2.3" />
-              </svg>
-              <span className="sr-only">Prev</span>
+              <svg width="10" height="16" viewBox="0 0 10 16" className="rotate-180"><path d="M1.5 1.5L8 8L1.5 14.5" stroke="black" strokeWidth="2.5" /></svg>
             </button>
             <button
               onClick={moveNext}
-              className="w-[2rem] h-[2rem] flex items-center justify-center bg-taupe rounded-[1rem] text-center disabled:opacity-25 disabled:cursor-not-allowed transition-all ease-in-out duration-300"
-              disabled={isDisabled('next')}
+              disabled={!companies || currentIndex >= companies.length - 1}
+              className="w-12 h-12 flex items-center justify-center bg-white border border-gray-200 rounded-full disabled:opacity-20 shadow-sm hover:border-[#0f52b9] transition-all"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
-                <path d="M1.5 1.5L8 8L1.5 14.5" stroke="#0D1B2A" stroke-width="2.3" />
-              </svg>
-              <span className="sr-only">Next</span>
+              <svg width="10" height="16" viewBox="0 0 10 16"><path d="M1.5 1.5L8 8L1.5 14.5" stroke="black" strokeWidth="2.5" /></svg>
             </button>
           </div>
         </div>
-        <div className="hidden xl:flex justify-end items-center w-12/12 xl:w-1/2">
-          <a href="/companies" className="no-underline w-full xl:w-auto py-[0.9375rem] xl:mr-[3rem] px-[1.5rem] rounded-small text-[1.25rem] font-[600] leading-[125%] tracking-[-0.025rem] capitalize border-2 color-black border-[#0d1b2a33]">
-            See all
-          </a>
+
+        {/* Viewport */}
+        <div className="px-12 overflow-hidden">
+          <div
+            ref={carousel}
+            className="flex flex-nowrap gap-8 overflow-x-auto no-scrollbar pb-10 pt-2"
+          >
+            {companies?.map((company, index) => (
+              <div key={index} className="flex-none w-80">
+                <CarouselCard company={company} border={true} variant="default" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-      <div className="relative container-spill xl:pl-[3rem] carousel-wrapper carousel-wrapper-right">
-        <div
-          ref={carousel}
-          onMouseDown={handleMouseDown}
-          onMouseLeave={handleMouseLeave}
-          onMouseUp={handleMouseUp}
-          onMouseMove={handleMouseMove}
-          className={`carousel-container no-scrollbar overflow-auto touch-pan-x relative flex gap-[1rem] ${isDown ? 'scroll-auto cursor-grabbing' : 'scroll-smooth cursor-grab'} snap-x snap-mandatory z-0 lg:pr-[2rem]`}
-        >
-          {companies && companies.map((companyData, index) => {
-            return (
-              <CarouselCard company={companyData} key={index} />
-            );
-          })}
-        </div>
-      </div>
-      <div className="block container mx-auto pl-[1.5rem] py-[3rem] xl:hidden justify-center items-center w-12/12">
-        <a href="/companies" className="no-underline table-cell w-full xl:w-auto py-[0.9375rem] xl:mr-[3rem] px-[1.5rem] rounded-small text-[1.25rem] font-[600] leading-[125%] tracking-[-0.025rem] capitalize border-2 color-black border-[#0d1b2a33]">
-          See all
-        </a>
-      </div>
-    </div>
+    </section>
   );
 };
 

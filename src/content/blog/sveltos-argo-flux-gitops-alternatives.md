@@ -1,8 +1,8 @@
 ---
 title: "Argo CD and Flux CD are not the only GitOps Tools for Kubernetes"
 description: "A look at Sveltos as a powerful alternative for GitOps-based multi-cluster management."
-pubDate: 2024-06-30
-author: "Gianluca Mardente"
+pubDate: 2024-04-24
+author: "Artem Lajko"
 tag: "Tutorial"
 ---
 
