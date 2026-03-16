@@ -30,11 +30,11 @@ const Carousel = ({ companies }) => {
        1. bg-[#F4F7FA] is a distinct light blue-gray.
        2. w-screen + negative margins forces the background to hit both screen edges.
     */
-    <section className="relative w-screen left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] bg-[#F4F7FA] py-20 my-16">
+    <section className="relative w-screen left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] bg-[#F4F7FA] pb-4 pt-4 mt-4 mb-10">
       <div className="max-w-[1400px] mx-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-10 px-12">
-          <h2 className="text-3xl font-bold text-[#0D1B2A]">Trusted Partners</h2>
+          <h2 className="text-3xl font-bold text-[#0D1B2A]">Adopters</h2>
           <div className="flex gap-4">
             <button
               onClick={movePrev}
