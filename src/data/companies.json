@@ -2,7 +2,7 @@
   {
     "name": "Mirantis",
     "url": "https://www.mirantis.com/",
-    "background": "#f4f4ff",
+    "background": "#FFFFFF",
     "logo": "/images/companies/mirantis.svg"
   },
   {
@@ -20,13 +20,13 @@
   {
     "name": "Renault",
     "url": "https://www.renaultgroup.com",
-    "background": "#000000",
+    "background": "#FFFFFF",
     "logo": "/images/companies/renault.png"
   },
   {
     "name": "Clastix Labs",
     "url": "https://clastix.io/",
-    "background": "#96afce",
+    "background": "#FFFFFF",
     "logo": "/images/companies/clastix.png"
   },
   {
@@ -38,13 +38,13 @@
   {
     "name": "SparkFabrik",
     "url": "https://www.sparkfabrik.com",
-    "background": "#ffd3d3",
+    "background": "#FFFFFF",
     "logo":"/images/companies/SparkFabrikLogo.svg"
   },
     {
     "name": "Engineering Ingegneria Informatica",
     "url": "https://www.eng.it/it",
-    "background": "#000000",
+    "background": "#FFFFFF",
     "logo": "/images/companies/logo-eng.png"
   }
 ]
