@@ -31,7 +31,7 @@
                 "icon": "/images/icons/k8s.svg",
                 "title": "Centralized Distribution",
                 "desc": "Sveltos acts as the control plane for your fleet, orchestrating the distribution of Helm charts, Kustomize overlays, and YAML/JSON manifests from a management cluster to all managed clusters.",
-                "image": "https://raw.githubusercontent.com/projectsveltos/sveltos/main/docs/assets/addons_deployment.gif",
+                "image": "https://camo.githubusercontent.com/da5ad47b4eea412ab828c8e0535cecd60825c1c75b770a772c07c906df498306/68747470733a2f2f70726f6a6563747376656c746f732e6769746875622e696f2f7376656c746f732f6173736574732f6d756c74692d636c7573746572732e706e67",
                 "detail": "Manage the entire lifecycle of resources from a single point of truth. Sveltos ensures your core add-ons and applications are consistently deployed, versioned, and kept up-to-date across your entire multi-cluster environment."
             },
             {

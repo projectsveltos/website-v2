@@ -8,4 +8,4 @@ tag: "Tutorial"
 
 In many scenarios, the order in which resources are deployed is critical. Sveltos provides the tools to ensure your Kubernetes resources are rolled out in a controlled and orderly fashion.
 
-Read the full article on DEV Community: [Deploying Kubernetes Resources in Orderly Manner](https://dev.to/gianlucam76/using-sveltos-to-deploy-kubernetes-resources-in-a-controlled-and-orderly-manner-24jn)
+Read the full article on GitHub: [Deploying Kubernetes Resources in Orderly Manner](https://github.com/gianlucam76/devops-tutorial/blob/main/application-dependencies/README.md)

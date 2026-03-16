@@ -129,7 +129,7 @@ const getYoutubeId = (url) => {
           </div>
         </div>
 
-        {allTutorials.slice(0, 1).map((t) => {
+        {allTutorials.slice(0, 2).map((t) => {
           const videoId = getYoutubeId(t.data.videoUrl);
           return (
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-[#f8faff] border border-[#dce8f8] rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group">
