@@ -1,0 +1,213 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Hero from '../components/Hero.astro';
+import Button from '../components/Button.astro';
+import homeData from '../data/home.json';
+import MerchSection from '../components/MerchSection.astro';
+
+import pricing from '../data/pricing.json';
+
+const enterpriseImage = "/images/background-images/entreprise-support.png";
+const enterprisePriceFormatted = pricing.enterprisePrice.toLocaleString();
+
+const seoMetaData = {
+  description: 'Sveltos Pricing: Open Source Free Forever with Enterprise-Grade Support. Tech Support, Pull Mode, and Priority Slack for your Kubernetes fleet.',
+  slug: 'pricing/'
+};
+
+const checkIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
+---
+
+<Layout title="Pricing and Support: Sveltos" seo={seoMetaData}>
+  <header>
+    <Hero
+      variant="standard"
+      isImageLeft={true}
+      heroImage={enterpriseImage}
+      headline="OSS Free Forever. Built for Enterprise."
+      subhead="Sveltos is and will always be open source. Our support plans are designed for teams that need production-grade reliability, security, and direct architectural guidance."
+      isWhiteBg={true}
+      isSmall={true}
+      imageWidthClass="lg:w-1/3"
+      buttonsData={[
+        {
+          text: "Talk to an expert",
+          link: "/contact/",
+          type: "primary",
+          color: "blue",
+          iconName: "arrow"
+        }
+      ]}
+    />
+  </header>
+
+  <main>
+    <!-- PRICING TIERS -->
+    <Section sectionStyles="py-[3rem] px-[1.5rem] xl:px-[3.5rem] bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          <!-- OSS TIER -->
+          <div class="border border-borderGray rounded-3xl p-8 flex flex-col hover:shadow-lg transition-shadow">
+            <div class="mb-8">
+              <span class="text-xs font-bold bg-gray/10 text-gray px-3 py-1 rounded-full uppercase tracking-widest">Community</span>
+              <h2 class="text-3xl font-bold mt-4 mb-2">Open Source</h2>
+              <div class="text-4xl font-bold text-black">$0 <span class="text-lg text-gray font-normal">/ cluster</span></div>
+              <p class="text-gray mt-4">Free forever for everyone. No strings attached.</p>
+            </div>
+            <ul class="flex flex-col gap-4 mb-12 flex-1 text-black">
+              <li class="flex items-center gap-3">
+                <span class="text-teal font-bold" set:html={checkIcon} />
+                <span>All Sveltos Core Features</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-teal font-bold" set:html={checkIcon} />
+                <span>Community Slack Support</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-teal font-bold" set:html={checkIcon} />
+                <span>GitHub Issue Management</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-teal font-bold" set:html={checkIcon} />
+                <span>Public Documentation</span>
+              </li>
+            </ul>
+            <Button type="secondary" cta="Get Started Free" url="https://projectsveltos.github.io/sveltos/getting_started/install/install/" color="primary" iconName="arrow" />
+          </div>
+
+          <!-- ENTERPRISE SUPPORT TIER -->
+          <div class="border-2 border-primary rounded-3xl p-8 flex flex-col shadow-xl bg-primary/5 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-4 py-1 rounded-bl-xl uppercase tracking-widest">Recommended</div>
+            <div class="mb-8">
+              <span class="text-xs font-bold bg-primary text-white px-3 py-1 rounded-full uppercase tracking-widest">Enterprise</span>
+              <h2 class="text-3xl font-bold mt-4 mb-2">Enterprise Premium</h2>
+              <div class="text-4xl font-bold text-black">${enterprisePriceFormatted} <span class="text-lg text-gray font-normal">/ cluster / year</span></div>
+              <p class="text-gray mt-4">Production-grade support and security for mission-critical fleets.</p>
+            </div>
+            <ul class="flex flex-col gap-4 mb-12 flex-1 text-black font-semibold">
+              <li class="flex items-center gap-3">
+                <span class="text-primary" set:html={checkIcon} />
+                <div class="flex items-center gap-1.5">
+                    <span>Enterprise Premium Tech Support</span>
+                </div>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-primary" set:html={checkIcon} />
+                <div class="flex items-center gap-1.5">
+                    <span class="font-bold">Pull Mode</span>
+                    <a href="#pull-mode" class="text-primary no-underline font-bold hover:opacity-70">?</a>
+                </div>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-primary" set:html={checkIcon} />
+                <span>Proactive Design Guidance</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-primary" set:html={checkIcon} />
+                <span>Priority Slack Channel</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-primary" set:html={checkIcon} />
+                <span>SLA-backed Response Times</span>
+              </li>
+            </ul>
+            <div class="flex flex-col gap-3">
+              <Button type="primary" cta="Get Enterprise Support" url="/contact/" color="blue" iconName="arrow" />
+              <Button type="secondary" cta="Book a Demo" url="/contact/" color="primary" iconName="arrow" />
+            </div>
+          </div>
+        </div>
+
+        <!-- CUSTOM DEV -->
+        <div class="mt-12 bg-taupe/20 border border-borderGray rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="max-w-xl text-center md:text-left">
+            <h3 class="text-xl font-bold text-black mb-2">Need Custom Development?</h3>
+            <p class="text-gray m-0">Requiring a specific integration, custom addon, or dedicated feature? We offer custom development services tailored to your roadmap.</p>
+          </div>
+          <Button type="secondary" cta="Request a Quote" url="/contact/" color="black" iconName="arrow" />
+        </div>
+      </div>
+    </Section>
+
+    <!-- PULL MODE EXPLAINER -->
+    <Section id="pull-mode" sectionStyles="py-[3rem] px-[1.5rem] xl:px-[3.5rem] bg-background">
+      <div class="max-w-5xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+        <div class="lg:w-1/2">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-primary tag block m-0">Security & Architecture</span>
+            <span class="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-primary/20">Premium Feature</span>
+          </div>
+          <h2 class="text-4xl mb-6 leading-tight">Secure High-Security and Air-Gapped Environments</h2>
+          <p class="text-lg text-gray mb-8">
+            Traditional fleet management often requires the management cluster to have direct network access to every managed cluster. Pull Mode is designed specifically for air-gapped security and restricted networks.
+          </p>
+          <div class="grid grid-cols-1 gap-8">
+            <div class="flex gap-4 items-start">
+              <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-borderGray">
+                <span class="text-primary font-bold text-xl">1</span>
+              </div>
+              <div>
+                <strong class="text-xl text-black block mb-2">Zero Inbound Connectivity</strong>
+                <p class="text-[0.95rem] text-gray m-0 leading-relaxed">
+                  In Pull Mode, the Sveltos agent runs within the managed cluster and initiates all communication. This eliminates the need for any inbound VPNs, SSH tunnels, or open firewall ports. If your cluster can reach the management plane over HTTPS, it is managed.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-borderGray">
+                <span class="text-primary font-bold text-xl">2</span>
+              </div>
+              <div>
+                <strong class="text-xl text-black block mb-2">Air-gapped & Restricted Networks</strong>
+                <p class="text-[0.95rem] text-gray m-0 leading-relaxed">
+                  Designed for air-gapped, edge, and restricted environments. Whether it's a retail store, a vehicle, or a high-security private cloud, Secure Pull Mode ensures consistent configuration delivery without compromising network security policies.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-borderGray">
+                <span class="text-primary font-bold text-xl">3</span>
+              </div>
+              <div>
+                <strong class="text-xl text-black block mb-2">Scalability & Resilience</strong>
+                <p class="text-[0.95rem] text-gray m-0 leading-relaxed">
+                  Sveltos handles thousands of clusters polling efficiently. Even if the management cluster is temporarily unavailable, managed clusters continue to operate with their last known state, re-syncing automatically when the connection is restored.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/2 min-h-[400px]">
+          <div class="text-center">
+            <img src="/images/background-images/pullmode.png" alt="Pull Mode " class="w-full h-auto " />
+          </div>
+        </div>
+      </div>
+    </Section>
+
+    <!-- DONATIONS SECTION -->
+    <Section sectionStyles="py-[2rem] px-[1.5rem] xl:px-[3.5rem] bg-taupe/10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-red-50 text-red-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          Support the Project
+        </div>
+        <h2 class="text-4xl font-bold mb-6">Sveltos Relies on Your Donations</h2>
+        <p class="text-xl text-gray mb-10 max-w-2xl mx-auto leading-relaxed">
+          As a pure Open Source project, we rely on community donations to keep Sveltos alive, active, and independent. Your support directly funds development, maintenance, and community initiatives.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <Button type="primary" cta="Donate on GitHub Sponsors" url="https://github.com/sponsors/projectsveltos" color="blue" iconName="arrow" />
+          <Button type="secondary" cta="Donate via OpenCollective" url="https://opencollective.com/projectsveltos" color="primary" iconName="arrow" />
+        </div>
+      </div>
+    </Section>
+
+
+
+
+    <!-- MERCH SECTION -->
+    <MerchSection />
+  </main>
+</Layout>

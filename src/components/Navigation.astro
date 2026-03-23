@@ -1,0 +1,163 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/navigation/logo-header.png';
+import close from '/images/icons/close.svg?raw';
+import hamburger from '/images/icons/hamburger.svg?raw';
+import Button from './Button.astro';
+
+const { links, socialLinks, documentationUrl } = Astro.props;
+
+const date = new Date();
+const year = date.getFullYear();
+
+---
+
+<nav class="sticky top-0 z-50 w-full bg-white border-b border-borderGray transition-all duration-300">
+  <div class="container mx-auto relative px-4 sm:px-6 lg:px-8 max-w-7xl py-4 flex justify-between items-center bg-transparent">
+  <a class="text-3xl font-bold leading-none w-4/12 md:w-3/12 lg:w-2/12" href="/">
+    <Image src={logo} densities={[1, 1.5, 2, 3, 4]} alt="Sveltos" />
+  </a>
+  <div class="lg:hidden">
+    <button class="relative navbar-burger flex items-center w-[32px] h-[18px]">
+      <Fragment set:html={hamburger} class="relative w-[100%] h-auto"/>
+    </button>
+  </div>
+  <div class="hidden relative lg:flex items-center lg:justify-end grow">
+    <ul class="lg:flex items-center mr-auto ml-8">
+      {             
+        links && links.map((link) => {
+          const isActive = Astro.url.pathname === link.url || (link.url !== '/' && Astro.url.pathname.startsWith(link.url));
+          return (
+            <li>
+              <a 
+                class:list={[
+                  "block px-4 py-2 text-[0.875rem] transition-colors rounded-full hover:bg-[#f3f4f6]",
+                  isActive ? "text-black font-semibold bg-[#f3f4f6]" : "text-[#526471] font-medium"
+                ]} 
+                href={link.url} 
+                target={link.target}
+              >
+                {link.name}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+    <ul class="flex gap-[0.38rem] items-center">
+      <li class="mr-4">
+        <a href={documentationUrl} target="_blank" class="hidden lg:flex items-center gap-1.5 px-4 py-2 text-[0.875rem] font-medium text-[#526471] hover:text-black transition-all">
+          Documentation
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="translate-y-[1px]"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </li>
+      <li class="ml-2">
+         <Button type="primary" cta="Talk to us" url="/contact/" color="white" iconName="arrow" />
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
+<div class="navbar-menu relative z-50 hidden">
+  <div class="navbar-backdrop fixed inset-0 bg-transparent"></div>
+  <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-[2.5rem] px-[1rem] py-[1.5rem] bg-background border-r overflow-y-auto">
+    <div class="flex items-center mb-[3rem]">
+      <a class="mr-auto text-3xl font-bold leading-none w-6/12 pr-[1rem] md:pr-0 md:w-6/12" href="/">
+        <Image src={logo} alt="Sveltos Logo" densities={[1, 2, 3, 4]} />
+      </a>
+      <button class="navbar-close relative h-[24px] w-[24px]">
+        <Fragment set:html={close} />
+      </button>
+    </div>
+    <div>
+      <ul>
+        {
+          links.map((link) => {
+            const isActive = Astro.url.pathname === link.url || (link.url !== '/' && Astro.url.pathname.startsWith(link.url));
+            return (
+              <li class="mb-[1.69rem]">
+                <a 
+                  class:list={[
+                    "block text-[1.125rem] leading-[135%] tracking-[-0.0225rem] transition-colors hover:text-primary",
+                    isActive ? "text-primary font-bold" : "text-tar font-[500]"
+                  ]} 
+                  href={link.url} 
+                  target={link.target}
+                >
+                  {link.name}
+                </a>
+              </li>
+            );
+          })
+        }
+        <li class="mb-[1.69rem] pt-4 border-t border-borderGray">
+          <a class="flex items-center gap-2 text-[1.125rem] leading-[135%] font-bold tracking-[-0.0225rem] text-primary underline decoration-2 underline-offset-4 active:opacity-70 group" href={documentationUrl} target="_blank">
+            Documentation
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </li>
+        <li class="mt-4 pt-6">
+          <a href="/contact/" class="flex items-center justify-center gap-2 w-full bg-primary text-white text-center py-3 rounded-xl font-bold hover:bg-primary/90 transition-all shadow-md group">
+            Talk to us
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="mt-auto">
+      <div class="pt-6">
+        <ul class="flex items-center gap-3">
+        {
+          socialLinks.map((link) => <li class="mb-[1rem]">
+            <a class="relative " href={link.url} target={link.target}><div class="relative h-[30px] w-[30px]"><Image src={link.icon} alt={link.name} densities={[1,2,3,4]} class="relative w-100 h-auto" /></div></a>
+          </li>)
+        }
+        </ul>
+        <p class="text-lightGray text-[1rem] heading-[130%] tracking-[-0.02rem]">Copyright © {year ? year : ''} sveltos.projectsveltos.io | All Rights Reserved</p>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<script>
+  // Burger menus
+  document.addEventListener('DOMContentLoaded', function() {
+      // open
+      const burger = document.querySelectorAll('.navbar-burger');
+      const menu = document.querySelectorAll('.navbar-menu');
+  
+      if (burger.length && menu.length) {
+          for (var i = 0; i < burger.length; i++) {
+              burger[i].addEventListener('click', function() {
+                  for (var j = 0; j < menu.length; j++) {
+                      menu[j].classList.toggle('hidden');
+                  }
+              });
+          }
+      }
+  
+      // close
+      const close = document.querySelectorAll('.navbar-close');
+      const backdrop = document.querySelectorAll('.navbar-backdrop');
+  
+      if (close.length) {
+          for (var i = 0; i < close.length; i++) {
+              close[i].addEventListener('click', function() {
+                  for (var j = 0; j < menu.length; j++) {
+                      menu[j].classList.toggle('hidden');
+                  }
+              });
+          }
+      }
+  
+      if (backdrop.length) {
+          for (var i = 0; i < backdrop.length; i++) {
+              backdrop[i].addEventListener('click', function() {
+                  for (var j = 0; j < menu.length; j++) {
+                      menu[j].classList.toggle('hidden');
+                  }
+              });
+          }
+      }
+  });
+  </script>

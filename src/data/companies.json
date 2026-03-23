@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Mirantis",
+    "url": "https://www.mirantis.com/",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/mirantis.svg"
+  },
+  {
+    "name": "Platform 9",
+    "url": "https://platform9.com/",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/platform9.jpg"
+  },
+  {
+    "name": "Comcast",
+    "url": "https://corporate.comcast.com",
+    "background": "#FFFFFF",
+    "logo": "https://corporate.comcast.com/media/img/original/2024/03/corporate_NewComcastLogo_16x9.png"
+  },
+  {
+    "name": "Renault",
+    "url": "https://www.renaultgroup.com",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/renault.png"
+  },
+  {
+    "name": "Clastix Labs",
+    "url": "https://clastix.io/",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/clastix.png"
+  },
+  {
+    "name": "Software Craftsman",
+    "url": "https://craftsman-software.com/",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/craaftsman.svg"
+  },
+  {
+    "name": "SparkFabrik",
+    "url": "https://www.sparkfabrik.com",
+    "background": "#FFFFFF",
+    "logo":"/images/companies/SparkFabrikLogo.svg"
+  },
+    {
+    "name": "Engineering Ingegneria Informatica",
+    "url": "https://www.eng.it/it",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/logo-eng.png"
+  }
+]

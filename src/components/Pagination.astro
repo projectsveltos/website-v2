@@ -1,0 +1,50 @@
+---
+const { prevUrl, nextUrl, currentPage, lastPage } = Astro.props;
+
+const prevUrlWithHash = prevUrl ? `${prevUrl}#blog-list` : null;
+const nextUrlWithHash = nextUrl ? `${nextUrl}#blog-list` : null;
+---
+
+<nav class="flex items-center justify-center space-x-4 py-12" aria-label="Pagination">
+  {prevUrlWithHash ? (
+    <a
+      href={prevUrlWithHash}
+      class="inline-flex items-center px-4 py-2 text-sm font-medium text-primary bg-white border border-primary rounded-md hover:bg-primary/5 transition-colors duration-200"
+    >
+      <svg class="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      Previous
+    </a>
+  ) : (
+    <span class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-400 bg-white border border-gray-200 rounded-md cursor-not-allowed">
+      <svg class="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      Previous
+    </span>
+  )}
+
+  <span class="text-sm font-medium text-gray-700">
+    Page {currentPage} of {lastPage}
+  </span>
+
+  {nextUrlWithHash ? (
+    <a
+      href={nextUrlWithHash}
+      class="inline-flex items-center px-4 py-2 text-sm font-medium text-primary bg-white border border-primary rounded-md hover:bg-primary/5 transition-colors duration-200"
+    >
+      Next
+      <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  ) : (
+    <span class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-400 bg-white border border-gray-200 rounded-md cursor-not-allowed">
+      Next
+      <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </span>
+  )}
+</nav>
