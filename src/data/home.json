@@ -42,6 +42,13 @@
                 "detail": "Eliminate race conditions by defining precise dependencies. Sveltos ensures stateful components, CRDs, and configurations bootstrap in the exact sequence your application requires."
             },
             {
+                "icon": "/images/icons/eventdriven.svg",
+                "title": "Drift Detection & Remediation",
+                "desc": "Automatically detect and correct configuration drift. Ensure your clusters always match your desired state, preventing manual 'quick fixes' from causing permanent issues.",
+                "image": "https://projectsveltos.github.io/sveltos/assets/reconcile_configuration_drift.gif",
+                "detail": "Sveltos continuously monitors managed clusters. If a resource is modified or deleted locally, Sveltos can notify you or automatically trigger a reconciliation to restore the correct configuration instantly."
+            },
+            {
                 "icon": "/images/icons/formats.svg",
                 "title": "Powerful Templating",
                 "desc": "Represent add-ons as templates and let Sveltos automatically inject cluster-specific details for truly dynamic and consistent deployments.",
@@ -61,13 +68,6 @@
                 "desc": "Securely manage clusters in restricted environments, including those behind strict firewalls, air-gapped setups, and edge locations.",
                 "image": "https://projectsveltos.github.io/sveltos/main/assets/sveltos_pull_mode.png",
                 "detail": "Enable zero-trust management by eliminating inbound connections to your clusters. In Pull Mode, a lightweight agent initiates the connection to retrieve updates, making it perfect for edge computing."
-            },
-            {
-                "icon": "/images/icons/eventdriven.svg",
-                "title": "Drift Detection & Remediation",
-                "desc": "Automatically detect and correct configuration drift. Ensure your clusters always match your desired state, preventing manual 'quick fixes' from causing permanent issues.",
-                "image": "https://projectsveltos.github.io/sveltos/assets/reconcile_configuration_drift.gif",
-                "detail": "Sveltos continuously monitors managed clusters. If a resource is modified or deleted locally, Sveltos can notify you or automatically trigger a reconciliation to restore the correct configuration instantly."
             }
         ],
         "buttons": [
