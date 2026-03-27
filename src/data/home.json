@@ -4,7 +4,7 @@
     },
     "hero": {
         "headline": "Intelligent Orchestration for <br/>Multi-Cluster Kubernetes <img src=\"/images/icons/k8s.svg\" class=\"inline-block w-8 h-12 lg:w-8 lg:h-8 align-middle ml-1\" />",
-        "subhead": "The open-source event-driven controller that automates add-on distribution, enforces global policies, and eliminates configuration drift across your entire fleet.",
+        "subhead": "The open-source event-driven controller that automates add-on distribution, enforces global policies, and eliminates configuration drift across a fleet of clusters.",
         "buttons": [
             {
                 "text": "Get Started (Open Source)",
@@ -25,49 +25,47 @@
     "oss": {
         "tag": "Features",
         "image": "/images/background-images/oss.svg",
-        "heading": "Orchestrating deployments across your Kubernetes fleet",
+        "heading": "Orchestrating deployments across a fleet of clusters",
         "features": [
             {
                 "icon": "/images/icons/k8s.svg",
                 "title": "Centralized Distribution",
-                "desc": "Sveltos acts as the control plane for your fleet, orchestrating the distribution of Helm charts, Kustomize overlays, and YAML/JSON manifests from a management cluster to all managed clusters.",
+                "desc": "Sveltos is the control plane for your Kubernetes fleet. It manages the distribution of Helm charts, Kustomize overlays, and YAML/JSON manifests from a management cluster to all the managed clusters.",
                 "image": "https://camo.githubusercontent.com/da5ad47b4eea412ab828c8e0535cecd60825c1c75b770a772c07c906df498306/68747470733a2f2f70726f6a6563747376656c746f732e6769746875622e696f2f7376656c746f732f6173736574732f6d756c74692d636c7573746572732e706e67",
-                "detail": "Manage the entire lifecycle of resources from a single point of truth. Sveltos ensures your core add-ons and applications are consistently deployed, versioned, and kept up-to-date across your entire multi-cluster environment."
+                "detail": "Manage the entire lifecycle of resources from a single point of truth. Sveltos ensures your core add-ons and applications are consistently deployed, versioned, and kept up-to-date across your entire multi-cluster environment.",
+                "learnMore": "https://projectsveltos.github.io/sveltos/latest/"
             },
             {
                 "icon": "/images/icons/k8s.svg",
                 "title": "Orchestrated Deployment Order",
-                "desc": "Deploy custom resources in your defined order. Ensure deployments are predictable, controlled, and synchronized across every cluster.",
+                "desc": "Deploy custom resources in a defined order. Ensure deployments are predictable, controlled, and synchronized across every cluster.",
                 "image": "https://projectsveltos.github.io/sveltos/main/assets/helm_chart_order.gif",
-                "detail": "Eliminate race conditions by defining precise dependencies. Sveltos ensures stateful components, CRDs, and configurations bootstrap in the exact sequence your application requires."
+                "detail": "Eliminate race conditions by defining precise dependencies. Sveltos ensures stateful components, CRDs, and configurations bootstrap in the exact sequence your application requires.",
+                "learnMore": "https://projectsveltos.github.io/sveltos/latest/addons/addons/"
             },
             {
                 "icon": "/images/icons/eventdriven.svg",
                 "title": "Drift Detection & Remediation",
-                "desc": "Automatically detect and correct configuration drift. Ensure your clusters always match your desired state, preventing manual 'quick fixes' from causing permanent issues.",
+                "desc": "Automatically detect and correct configuration drift. Ensure clusters always match the desired state, preventing manual 'quick fixes' from causing permanent issues.",
                 "image": "https://projectsveltos.github.io/sveltos/assets/reconcile_configuration_drift.gif",
-                "detail": "Sveltos continuously monitors managed clusters. If a resource is modified or deleted locally, Sveltos can notify you or automatically trigger a reconciliation to restore the correct configuration instantly."
+                "detail": "Sveltos continuously monitors managed clusters. If a resource is modified or deleted locally, Sveltos can notify you or automatically trigger a reconciliation to restore the correct configuration instantly.",
+                "learnMore": "https://projectsveltos.github.io/sveltos/latest/features/configuration_drift/"
             },
             {
                 "icon": "/images/icons/formats.svg",
                 "title": "Powerful Templating",
                 "desc": "Represent add-ons as templates and let Sveltos automatically inject cluster-specific details for truly dynamic and consistent deployments.",
                 "image": "https://projectsveltos.github.io/sveltos/main/assets/templates.png",
-                "detail": "Write manifests once and reuse them everywhere. Sveltos dynamically patches templates at runtime using cluster-specific metadata, labels, or real-time data retrieved from the management cluster."
+                "detail": "Write manifests once and reuse them everywhere. Sveltos dynamically patches templates at runtime using cluster-specific metadata, labels, or real-time data retrieved from the management cluster.",
+                "learnMore": "https://projectsveltos.github.io/sveltos/latest/template/intro_template/"
             },
             {
                 "icon": "/images/icons/eventdriven.svg",
                 "title": "Event Framework",
                 "desc": "Go beyond static deployments with an event-driven architecture. Monitor managed clusters for specific changes and trigger automatic actions or remediations.",
                 "image": "https://raw.githubusercontent.com/projectsveltos/sveltos/main/docs/assets/event_driven_framework.gif",
-                "detail": "Use Lua or CEL to define sophisticated triggers based on resource state. Sveltos can automatically deploy auxiliary tools, rotate certificates, or remediate drift the moment an event is detected."
-            },
-            {
-                "icon": "/images/icons/close.svg",
-                "title": "Pull Mode",
-                "desc": "Securely manage clusters in restricted environments, including those behind strict firewalls, air-gapped setups, and edge locations.",
-                "image": "https://projectsveltos.github.io/sveltos/main/assets/sveltos_pull_mode.png",
-                "detail": "Enable zero-trust management by eliminating inbound connections to your clusters. In Pull Mode, a lightweight agent initiates the connection to retrieve updates, making it perfect for edge computing."
+                "detail": "Use Lua or CEL to define sophisticated triggers based on resource state. Sveltos can automatically deploy auxiliary tools, rotate certificates, or remediate drift the moment an event is detected.",
+                "learnMore": "https://projectsveltos.github.io/sveltos/latest/events/addon_event_deployment/"
             }
         ],
         "buttons": [
