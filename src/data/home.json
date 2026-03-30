@@ -91,7 +91,7 @@
         "heading": "Scale Your Fleet with Absolute Security and Control",
         "bullets": [
            {
-               "title": "Agent-initiated Pull Mode",
+               "title": "Pull Mode",
                "text": "Enable zero-trust management where agents connect outbound to the management plane. Securely manage clusters without opening inbound ports or exposing API servers."
            },
            {
