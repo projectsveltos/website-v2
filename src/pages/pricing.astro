@@ -52,6 +52,7 @@ const checkIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" s
             <div class="mb-8">
               <span class="text-xs font-bold bg-gray/10 text-gray px-3 py-1 rounded-full uppercase tracking-widest">Community</span>
               <h2 class="text-3xl font-bold mt-4 mb-2">Open Source</h2>
+              <p class="text-sm text-primary font-semibold mb-3">Free Forever.</p>
               <div class="text-4xl font-bold text-black">$0 <span class="text-lg text-gray font-normal">/ cluster</span></div>
               <p class="text-gray mt-4">Free forever for everyone. No strings attached.</p>
             </div>
@@ -62,15 +63,15 @@ const checkIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" s
               </li>
               <li class="flex items-center gap-3">
                 <span class="text-teal font-bold" set:html={checkIcon} />
-                <span>Community Slack Support</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-teal font-bold" set:html={checkIcon} />
                 <span>GitHub Issue Management</span>
               </li>
               <li class="flex items-center gap-3">
                 <span class="text-teal font-bold" set:html={checkIcon} />
                 <span>Public Documentation</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-teal font-bold" set:html={checkIcon} />
+                <span>Community Slack Support</span>
               </li>
             </ul>
             <Button type="secondary" cta="Get Started Free" url="https://projectsveltos.github.io/sveltos/getting_started/install/install/" color="primary" iconName="arrow" />
@@ -78,30 +79,21 @@ const checkIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" s
 
           <!-- ENTERPRISE SUPPORT TIER -->
           <div class="border-2 border-primary rounded-3xl p-8 flex flex-col shadow-xl bg-primary/5 relative overflow-hidden">
-            <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-4 py-1 rounded-bl-xl uppercase tracking-widest">Recommended</div>
+            <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-4 py-1 rounded-bl-xl uppercase tracking-widest">Most Popular</div>
             <div class="mb-8">
               <span class="text-xs font-bold bg-primary text-white px-3 py-1 rounded-full uppercase tracking-widest">Enterprise</span>
               <h2 class="text-3xl font-bold mt-4 mb-2">Enterprise Premium</h2>
+              <p class="text-sm text-primary font-semibold mb-3">Scale with Confidence. Expert Support Included.</p>
               <div class="text-4xl font-bold text-black">${enterprisePriceFormatted} <span class="text-lg text-gray font-normal">/ cluster / year</span></div>
-              <p class="text-gray mt-4">Production-grade support and security for mission-critical fleets.</p>
+              <p class="text-gray mt-4">Expert guidance, guaranteed uptime, and production-grade reliability for your Kubernetes fleet.</p>
             </div>
             <ul class="flex flex-col gap-4 mb-12 flex-1 text-black font-semibold">
               <li class="flex items-center gap-3">
                 <span class="text-primary" set:html={checkIcon} />
                 <div class="flex items-center gap-1.5">
-                    <span>Enterprise Premium Tech Support</span>
+                  <span>Priority Technical Support</span>
+                  <span class="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded font-normal">SLA-Backed</span>
                 </div>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-primary" set:html={checkIcon} />
-                <div class="flex items-center gap-1.5">
-                    <span class="font-bold">Pull Mode</span>
-                    <a href="#pull-mode" class="text-primary no-underline font-bold hover:opacity-70">?</a>
-                </div>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-primary" set:html={checkIcon} />
-                <span>Proactive Design Guidance</span>
               </li>
               <li class="flex items-center gap-3">
                 <span class="text-primary" set:html={checkIcon} />
@@ -109,12 +101,20 @@ const checkIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" s
               </li>
               <li class="flex items-center gap-3">
                 <span class="text-primary" set:html={checkIcon} />
-                <span>SLA-backed Response Times</span>
+                <span>Zero-Downtime Security Patches</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-primary" set:html={checkIcon} />
+                <span>Priority Bug Fixes & Feature Requests</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-primary" set:html={checkIcon} />
+                <span>Architectural Guidance & Best Practices</span>
               </li>
             </ul>
             <div class="flex flex-col gap-3">
-              <Button type="primary" cta="Get Enterprise Support" url="/contact/" color="blue" iconName="arrow" />
-              <Button type="secondary" cta="Book a Demo" url="/contact/" color="primary" iconName="arrow" />
+              <Button type="primary" cta="Start with Enterprise" url="/contact/" color="blue" iconName="arrow" />
+              <Button type="secondary" cta="Schedule a Consultation" url="/contact/" color="primary" iconName="arrow" />
             </div>
           </div>
         </div>
@@ -130,57 +130,104 @@ const checkIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" s
       </div>
     </Section>
 
-    <!-- PULL MODE EXPLAINER -->
-    <Section id="pull-mode" sectionStyles="py-[3rem] px-[1.5rem] xl:px-[3.5rem] bg-background">
+    <!-- ENTERPRISE OFFERINGS -->
+    <Section id="enterprise-features" sectionStyles="py-[3rem] px-[1.5rem] xl:px-[3.5rem] bg-background">
       <div class="max-w-5xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
         <div class="lg:w-1/2">
           <div class="flex items-center gap-3 mb-4">
-            <span class="text-primary tag block m-0">Security & Architecture</span>
-            <span class="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-primary/20">Premium Feature</span>
+            <span class="text-primary tag block m-0">Enterprise Features</span>
           </div>
-          <h2 class="text-4xl mb-6 leading-tight">Secure High-Security and Air-Gapped Environments</h2>
+          <h2 class="text-4xl mb-6 leading-tight">Scalable, Secure, and Intelligent Deployments</h2>
           <p class="text-lg text-gray mb-8">
-            Traditional fleet management often requires the management cluster to have direct network access to every managed cluster. Pull Mode is designed specifically for air-gapped security and restricted networks.
+            Manage your entire Kubernetes fleet with enterprise-grade capabilities designed for security, scale, and intelligent operations.
           </p>
           <div class="grid grid-cols-1 gap-8">
+            <!-- Pull Mode -->
             <div class="flex gap-4 items-start">
               <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-borderGray">
                 <span class="text-primary font-bold text-xl">1</span>
               </div>
               <div>
-                <strong class="text-xl text-black block mb-2">Zero Inbound Connectivity</strong>
-                <p class="text-[0.95rem] text-gray m-0 leading-relaxed">
-                  In Pull Mode, the Sveltos agent runs within the managed cluster and initiates all communication. This eliminates the need for any inbound VPNs, SSH tunnels, or open firewall ports. If your cluster can reach the management plane over HTTPS, it is managed.
+                <strong class="text-xl text-black block mb-2">Pull Mode</strong>
+                <p class="text-[0.95rem] text-gray m-0 leading-relaxed mb-3">
+                  Ideal for managed clusters behind a firewall, in air-gapped environments, edge deployments with limited bandwidth or highly regulated and secure setups. Managed clusters pull configuration from the management cluster.
                 </p>
+                <ul class="text-[0.9rem] text-gray space-y-1.5 ml-0">
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary mt-0.5">✓</span>
+                    <span>Zero inbound firewall rules requirement</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary mt-0.5">✓</span>
+                    <span>Works with restricted networks and edge locations</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary mt-0.5">✓</span>
+                    <span>Automatic re-sync when connectivity is restored</span>
+                  </li>
+                </ul>
               </div>
             </div>
+
+            <!-- Progressive Rollout Pipelines -->
             <div class="flex gap-4 items-start">
               <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-borderGray">
                 <span class="text-primary font-bold text-xl">2</span>
               </div>
               <div>
-                <strong class="text-xl text-black block mb-2">Air-gapped & Restricted Networks</strong>
-                <p class="text-[0.95rem] text-gray m-0 leading-relaxed">
-                  Designed for air-gapped, edge, and restricted environments. Whether it's a retail store, a vehicle, or a high-security private cloud, Secure Pull Mode ensures consistent configuration delivery without compromising network security policies.
+                <strong class="text-xl text-black block mb-2">Progressive Rollout Pipelines</strong>
+                <p class="text-[0.95rem] text-gray m-0 leading-relaxed mb-3">
+                  Deploy with confidence through staged environments. Gradually promote configurations from QA → Staging → Pre-Prod → Production with automated pre and post validation health checks.
                 </p>
+                <ul class="text-[0.9rem] text-gray space-y-1.5 ml-0">
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary mt-0.5">✓</span>
+                    <span>Stage-based promotion</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary mt-0.5">✓</span>
+                    <span>Manual or automatic promotion per stage</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary mt-0.5">✓</span>
+                    <span>Health checks before and after advancing stages</span>
+                  </li>
+                </ul>
               </div>
             </div>
+
+            <!-- MCP Server -->
             <div class="flex gap-4 items-start">
               <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-borderGray">
                 <span class="text-primary font-bold text-xl">3</span>
               </div>
               <div>
-                <strong class="text-xl text-black block mb-2">Scalability & Resilience</strong>
-                <p class="text-[0.95rem] text-gray m-0 leading-relaxed">
-                  Sveltos handles thousands of clusters polling efficiently. Even if the management cluster is temporarily unavailable, managed clusters continue to operate with their last known state, re-syncing automatically when the connection is restored.
+                <strong class="text-xl text-black block mb-2">AI-Powered Management with MCP Server</strong>
+                <p class="text-[0.95rem] text-gray m-0 leading-relaxed mb-3">
+                  Connect AI assistants and chatbots directly to your Sveltos cluster. Manage operations through natural language commands and automated troubleshooting.
                 </p>
+                <ul class="text-[0.9rem] text-gray space-y-1.5 ml-0">
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary mt-0.5">✓</span>
+                    <span>Natural language cluster management</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary mt-0.5">✓</span>
+                    <span>Automated troubleshooting and diagnostics</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary mt-0.5">✓</span>
+                    <span>Real-time cluster analysis and insights</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
+
         <div class="lg:w-1/2 min-h-[400px]">
           <div class="text-center">
-            <img src="/images/background-images/pullmode.png" alt="Pull Mode " class="w-full h-auto " />
+            <img src="/images/background-images/pullmode.png" alt="Enterprise Features" class="w-full h-auto" />
           </div>
         </div>
       </div>
