@@ -13,7 +13,7 @@ const seoMetaData = {
 
 const heroData = {
   headline: "Sveltos Adopters",
-  subhead: 'Companies and teams running Sveltos in production: from startups to enterprise platform teams.',
+  subhead: 'From startups to Renault and Comcast — these are the companies and teams running Sveltos in production.',
   heroImage: "/images/background-images/adopters.png",
   buttons: [
     {
@@ -63,10 +63,18 @@ const heroData = {
           <div class="absolute bg-[url('/images/background-images/companies-right.png')] hidden md:block bg-no-repeat bg-contain bg-right-bottom h-[10rem] lg:w-1/2 right-0 bottom-0"></div>
         </div>
         <div class="flex-col mx-auto w-4/12 pt-[10rem] lg:w-8/12 lg:max-w-none text-center justify-center lg:py-[12rem] z-10">
-          <h2>Want to list your company?</h2>
-          <div class="justify-center flex pt-10">
+          <h2>Using Sveltos in production?</h2>
+          <p class="text-gray text-lg max-w-xl mx-auto mb-8">
+            Open one issue — we'll take it from there. No PR needed.
+          </p>
+          <ul class="flex flex-col md:flex-row gap-4 justify-center mb-10 text-left max-w-lg mx-auto">
+            <li class="flex items-start gap-2 text-gray text-sm"><span class="text-primary font-bold mt-0.5">✓</span> Listed on this page</li>
+            <li class="flex items-start gap-2 text-gray text-sm"><span class="text-primary font-bold mt-0.5">✓</span> Added to ADOPTERS.md</li>
+            <li class="flex items-start gap-2 text-gray text-sm"><span class="text-primary font-bold mt-0.5">✓</span> Shoutout on X & LinkedIn</li>
+          </ul>
+          <div class="justify-center flex">
               <Button
-                url="https://github.com/projectsveltos/adopters"
+                url="https://github.com/projectsveltos/adopters/issues/new?template=adopter.yml"
                 type="secondary"
                 color="black"
                 cta="Add your Company"
