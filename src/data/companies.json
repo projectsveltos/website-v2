@@ -46,5 +46,17 @@
     "url": "https://www.eng.it/it",
     "background": "#FFFFFF",
     "logo": "/images/companies/logo-eng.png"
+  },
+  {
+    "name": "Tinext Cloud",
+    "url": "https://cloud.tinext.com",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/tinext.svg"
+  },
+  {
+    "name": "Dinova",
+    "url": "https://www.dinova.one",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/dinova.png"
   }
 ]
