@@ -6,10 +6,10 @@
     "logo": "/images/companies/mirantis.svg"
   },
   {
-    "name": "Platform 9",
-    "url": "https://platform9.com/",
+    "name": "Mistral AI",
+    "url": "https://mistral.ai/products/compute",
     "background": "#FFFFFF",
-    "logo": "/images/companies/platform9.jpg"
+    "logo": "/images/companies/mistral-ai.svg"
   },
   {
     "name": "Comcast",
@@ -24,10 +24,22 @@
     "logo": "/images/companies/renault.png"
   },
   {
+    "name": "Platform 9",
+    "url": "https://platform9.com/",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/platform9.jpg"
+  },
+  {
     "name": "Clastix Labs",
     "url": "https://clastix.io/",
     "background": "#FFFFFF",
     "logo": "/images/companies/clastix.png"
+  },
+  {
+    "name": "Engineering Ingegneria Informatica",
+    "url": "https://www.eng.it/it",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/logo-eng.png"
   },
   {
     "name": "Software Craftsman",
@@ -40,12 +52,6 @@
     "url": "https://www.sparkfabrik.com",
     "background": "#FFFFFF",
     "logo":"/images/companies/SparkFabrikLogo.svg"
-  },
-    {
-    "name": "Engineering Ingegneria Informatica",
-    "url": "https://www.eng.it/it",
-    "background": "#FFFFFF",
-    "logo": "/images/companies/logo-eng.png"
   },
   {
     "name": "Tinext Cloud",
