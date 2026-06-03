@@ -1,17 +1,5 @@
 [
   {
-    "name": "Mirantis",
-    "url": "https://www.mirantis.com/",
-    "background": "#FFFFFF",
-    "logo": "/images/companies/mirantis.svg"
-  },
-  {
-    "name": "Mistral AI",
-    "url": "https://mistral.ai/products/compute",
-    "background": "#FFFFFF",
-    "logo": "/images/companies/mistral-ai.svg"
-  },
-  {
     "name": "Comcast",
     "url": "https://corporate.comcast.com",
     "background": "#FFFFFF",
@@ -24,22 +12,40 @@
     "logo": "/images/companies/renault.png"
   },
   {
+    "name": "Mistral AI",
+    "url": "https://mistral.ai/products/compute",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/mistral-ai.svg"
+  },
+  {
+    "name": "Mirantis",
+    "url": "https://www.mirantis.com/",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/mirantis.svg"
+  },
+  {
     "name": "Platform 9",
     "url": "https://platform9.com/",
     "background": "#FFFFFF",
     "logo": "/images/companies/platform9.jpg"
   },
   {
-    "name": "Clastix Labs",
-    "url": "https://clastix.io/",
+    "name": "IITS CONSULTING",
+    "url": "https://iits-consulting.de/en/",
     "background": "#FFFFFF",
-    "logo": "/images/companies/clastix.png"
+    "logo": "/images/companies/iits-consulting.svg"
   },
   {
     "name": "Engineering Ingegneria Informatica",
     "url": "https://www.eng.it/it",
     "background": "#FFFFFF",
     "logo": "/images/companies/logo-eng.png"
+  },
+  {
+    "name": "Clastix Labs",
+    "url": "https://clastix.io/",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/clastix.png"
   },
   {
     "name": "Software Craftsman",
