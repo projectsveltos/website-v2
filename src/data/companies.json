@@ -12,10 +12,22 @@
     "logo": "/images/companies/renault.png"
   },
   {
+    "name": "Direction Générale des Finances Publiques",
+    "url": "https://www.economie.gouv.fr/dgfip",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/dgfip.svg"
+  },
+  {
     "name": "Mistral AI",
     "url": "https://mistral.ai/products/compute",
     "background": "#FFFFFF",
     "logo": "/images/companies/mistral-ai.svg"
+  },
+  {
+    "name": "Engineering Ingegneria Informatica",
+    "url": "https://www.eng.it/it",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/logo-eng.png"
   },
   {
     "name": "Mirantis",
@@ -30,16 +42,10 @@
     "logo": "/images/companies/platform9.jpg"
   },
   {
-    "name": "IITS CONSULTING",
-    "url": "https://iits-consulting.de/en/",
+    "name": "SparkFabrik",
+    "url": "https://www.sparkfabrik.com",
     "background": "#FFFFFF",
-    "logo": "/images/companies/iits-consulting.svg"
-  },
-  {
-    "name": "Engineering Ingegneria Informatica",
-    "url": "https://www.eng.it/it",
-    "background": "#FFFFFF",
-    "logo": "/images/companies/logo-eng.png"
+    "logo":"/images/companies/SparkFabrikLogo.svg"
   },
   {
     "name": "Clastix Labs",
@@ -48,16 +54,10 @@
     "logo": "/images/companies/clastix.png"
   },
   {
-    "name": "Software Craftsman",
-    "url": "https://craftsman-software.com/",
+    "name": "IITS CONSULTING",
+    "url": "https://iits-consulting.de/en/",
     "background": "#FFFFFF",
-    "logo": "/images/companies/craaftsman.svg"
-  },
-  {
-    "name": "SparkFabrik",
-    "url": "https://www.sparkfabrik.com",
-    "background": "#FFFFFF",
-    "logo":"/images/companies/SparkFabrikLogo.svg"
+    "logo": "/images/companies/iits-consulting.svg"
   },
   {
     "name": "Tinext Cloud",
@@ -70,5 +70,11 @@
     "url": "https://www.dinova.one",
     "background": "#FFFFFF",
     "logo": "/images/companies/dinova.png"
+  },
+  {
+    "name": "Software Craftsman",
+    "url": "https://craftsman-software.com/",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/craaftsman.svg"
   }
 ]
