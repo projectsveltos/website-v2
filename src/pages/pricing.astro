@@ -4,6 +4,8 @@ import Section from '../components/Section.astro';
 import Hero from '../components/Hero.astro';
 import Button from '../components/Button.astro';
 import homeData from '../data/home.json';
+import MerchSection from '../components/MerchSection.astro';
+
 import pricing from '../data/pricing.json';
 
 const enterpriseImage = "/images/background-images/entreprise-support.png";
@@ -83,12 +85,6 @@ const checkIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" s
               <h2 class="text-3xl font-bold mt-4 mb-2">Enterprise Premium</h2>
               <p class="text-sm text-primary font-semibold mb-3">Scale with Confidence. Expert Support Included.</p>
               <div class="text-4xl font-bold text-black">${enterprisePriceFormatted} <span class="text-lg text-gray font-normal">/ cluster / year</span></div>
-              <div class="mt-3 bg-primary/10 border border-primary/25 rounded-xl px-4 py-3 flex flex-col gap-2 text-sm">
-                <p class="text-xs font-bold text-primary uppercase tracking-widest m-0">Volume & Multi-Year Discounts</p>
-                <span class="flex items-center gap-1.5"><span class="text-primary font-bold">↓</span> <span><strong>50+ clusters:</strong> volume discount available</span></span>
-                <span class="flex items-center gap-1.5"><span class="text-primary font-bold">↓↓</span> <span><strong>100+ clusters:</strong> even greater discount</span></span>
-                <span class="flex items-center gap-1.5"><span class="text-primary font-bold">↓↓↓</span> <span><strong>Multi-year commitment:</strong> additional savings</span></span>
-              </div>
               <p class="text-gray mt-4">Expert guidance, guaranteed uptime, and production-grade reliability for your Kubernetes fleet.</p>
             </div>
             <ul class="flex flex-col gap-4 mb-12 flex-1 text-black font-semibold">
@@ -196,6 +192,10 @@ const checkIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" s
                     <span class="text-primary mt-0.5">✓</span>
                     <span>Health checks before and after advancing stages</span>
                   </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary mt-0.5">✓</span>
+                    <span>Job-based active probes (smoke tests, connectivity checks)</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -250,6 +250,7 @@ const checkIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" s
         </p>
         <div class="flex flex-wrap justify-center gap-4">
           <Button type="primary" cta="Donate on GitHub Sponsors" url="https://github.com/sponsors/projectsveltos" color="blue" iconName="arrow" />
+          <Button type="secondary" cta="Donate via OpenCollective" url="https://opencollective.com/projectsveltos" color="primary" iconName="arrow" />
         </div>
       </div>
     </Section>
@@ -257,5 +258,7 @@ const checkIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" s
 
 
 
+    <!-- MERCH SECTION -->
+    <MerchSection />
   </main>
 </Layout>

@@ -99,6 +99,10 @@
                "text": "Minimize blast radius by staging deployments across environments. Promote changes from Dev to Production only after health checks pass, ensuring fleet-wide stability."
            },
            {
+               "title": "Job-based Checks",
+               "text": "Run active probes like smoke tests, synthetic transactions, connectivity checks as Kubernetes Jobs inside the managed clusters, using the Job outcome as the health verdict."
+           },
+           {
                "title": "Integrated MCP Server",
                "text": "Empower your AI-driven operations. Sveltos provides a native MCP Server, allowing AI SRE tools to securely discover, query, and manage your entire Kubernetes fleet using natural language."
            }
@@ -184,13 +188,13 @@
             {
                 "mode": "Push",
                 "icon": "/images/icons/close.svg",
-                "desc": "Management cluster pushes configs directly. Requires network access to managed clusters.",
+                "desc": "The management cluster pushes configurations to the managed clusters. Network access to the managed clusters is needed.",
                 "recommended": false
             },
             {
                 "mode": "Pull",
                 "icon": "/images/icons/open-source.svg",
-                "desc": "Agent in managed cluster polls management cluster. Only outbound connections needed.",
+                "desc": "The Sveltos agent in managed cluster polls the management cluster. Only outbound connections are needed.",
                 "recommended": true
             }
         ]
@@ -198,7 +202,7 @@
     "pricing": {
         "tag": "Pricing",
         "heading": "Find the right plan for your fleet",
-        "subhead": "Sveltos is free and open source. For enterprise features like Pull Mode, priority support, and SLAs: get in touch.",
+        "subhead": "Sveltos is free and open-source. For enterprise features like Pull Mode, priority support, and SLAs: get in touch.",
         "form": {
             "heading": "Contact Us",
             "fields": [
@@ -235,39 +239,28 @@
         "heading": "Real scenarios, battle-tested at scale",
         "cards": [
             {
-                "icon": "☁️",
                 "title": "Hybrid Multicloud Operations",
-                "desc": "Manage clusters across AWS, GCP, Azure, and on-prem from a single management plane."
+                "desc": "Manage add-ons and applications across AWS, GCP, Azure, and on-prem Kubernetes clusters from a single management plane."
             },
             {
-                "icon": "📦",
                 "title": "Fleet-Wide Add-on Delivery",
-                "desc": "Rollout Helm charts, operators, and policies consistently across every cluster."
+                "desc": "Rollout Helm charts, operators, and policies consistently across a fleet of clusters."
             },
             {
-                "icon": "🗄️",
+                "title": "GitOps Integration",
+                "desc": "Combine Sveltos with Flux or ArgoCD to deliver fully declarative, GitOps fleet management."
+            },
+            {
+                "title": "Multi-Tenant Platforms",
+                "desc": "Isolate and manage cluster configurations per tenant with Profiles and label selectors."
+            },
+            {
                 "title": "Database Deployment Automation",
                 "desc": "Automate stateful workload delivery with ordered deployment phases and drift detection."
             },
             {
-                "icon": "📨",
                 "title": "NATS Messaging Clusters",
-                "desc": "Deploy and sync NATS clusters across distributed environments using event-driven triggers."
-            },
-            {
-                "icon": "🌐",
-                "title": "API Gateway Workflows",
-                "desc": "Stage and manage API gateways and service mesh configs with fine-grained cluster targeting."
-            },
-            {
-                "icon": "🔄",
-                "title": "GitOps Integration",
-                "desc": "Combine Sveltos with Flux or Argo to deliver fully declarative, Git-driven fleet management."
-            },
-            {
-                "icon": "🏢",
-                "title": "Multi-Tenant Platforms",
-                "desc": "Isolate and manage cluster configurations per tenant with Profiles and label selectors."
+                "desc": "Deploy and syncronize NATS clusters across distributed environments using event-driven triggers."
             }
         ]
     },
