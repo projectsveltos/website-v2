@@ -64,11 +64,13 @@ const socialLinks = [
 ];
 
 const seoTitle = `${title} | Sveltos`;
-const seoDescription = seo?.description ? seo.description : 'Sveltos is an open-source Kubernetes add-on operator for GitOps-driven fleet management, multi-cluster configuration, and policy enforcement.';
+const seoDescription = seo?.description ? seo.description : 'Sveltos is an open-source Kubernetes add-on controller for fleet management, multi-cluster add-on distribution, policy enforcement, and platform engineering at scale.';
 const seoMetaImage = seo?.metaImage ? seo.metaImage : 'https://sveltos.projectsveltos.io/og-image.png';
 const seoSlug = seo?.slug ? seo.slug : '';
 
 const canonicalURL = `https://sveltos.projectsveltos.io/${seoSlug}`;
+
+const jsonLd = seo?.jsonLd ? JSON.stringify(seo.jsonLd) : null;
 ---
 
 <!doctype html>
@@ -79,31 +81,25 @@ const canonicalURL = `https://sveltos.projectsveltos.io/${seoSlug}`;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-    <meta charset="utf-8"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sveltos" />
     <meta property="og:title" content={seoTitle}/>
     <meta property="og:description" content={seoDescription}/>
     <meta property="og:image" content={seoMetaImage}/>
     <meta property='og:url'  content={canonicalURL}/>
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name='twitter:url' content={canonicalURL}/>
     <meta name='twitter:title' content={seoTitle}/>
     <meta name='twitter:description' content={seoDescription}/>
-    <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:image" content={seoMetaImage}/>
     <link rel="canonical" href={canonicalURL}/>
 		<title>{seoTitle}</title>
+    {jsonLd && <script type="application/ld+json" set:html={jsonLd} />}
     <script
       defer
       data-domain="sveltos.projectsveltos.io"
       src="https://plausible.io/js/script.js"
     ></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQRFE13KB8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-PQRFE13KB8');
-    </script>
     <ViewTransitions />
 	</head>
 	<body class="bg-background">
