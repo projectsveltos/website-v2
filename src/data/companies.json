@@ -24,6 +24,12 @@
     "logo": "/images/companies/mistral-ai.svg"
   },
   {
+    "name": "RTL",
+    "url": "https://www.rtl.nl/",
+    "background": "#FFFFFF",
+    "logo": "/images/companies/rtl.png"
+  },
+  {
     "name": "Engineering Ingegneria Informatica",
     "url": "https://www.eng.it/it",
     "background": "#FFFFFF",
