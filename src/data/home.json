@@ -60,6 +60,15 @@
                 "learnMore": "https://projectsveltos.github.io/sveltos/latest/deployment_order/progressive_rollout/"
             },
             {
+                "icon": "/images/icons/k8s.svg",
+                "title": "Job-based Health Checks",
+                "badge": "Enterprise",
+                "desc": "Run active probes like smoke tests, synthetic transactions and connectivity checks as Kubernetes Jobs inside the managed clusters. Sveltos deploys the Job, waits for it to finish, and uses the outcome as the health verdict.",
+                "image": "/images/background-images/job-check.gif",
+                "detail": "Some checks need to do something, not just inspect a field. A Job-based check runs a real probe from inside the cluster after an add-on is deployed, so the next step of a rollout waits until the probe passes.",
+                "learnMore": "https://projectsveltos.github.io/sveltos/latest/deployment_order/depends_on_with_health_checks/#job-based-health-validation"
+            },
+            {
                 "icon": "/images/icons/eventdriven.svg",
                 "title": "Drift Detection & Remediation",
                 "desc": "Automatically detect and correct configuration drift. Ensure clusters always match the desired state, preventing manual 'quick fixes' from causing permanent issues.",
