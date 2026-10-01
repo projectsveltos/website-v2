@@ -1,0 +1,70 @@
+<svg width="480" height="316" viewBox="0 0 480 316" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A single ClusterPromotion rolls one configuration out through development, uat, staging and production in order">
+<style>text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+@keyframes card0{0%,7.14%{fill:#F8FAFC;stroke:#CBD5E1}9.29%,15.0%{fill:#EAF3FB;stroke:#1C70B7}17.14%,92.86%{fill:#ECFDF3;stroke:#16A34A}97.14%,100%{fill:#F8FAFC;stroke:#CBD5E1}}
+@keyframes dot0{0%,7.14%{fill:#CBD5E1}9.29%,15.0%{fill:#1C70B7}17.14%,92.86%{fill:#16A34A}97.14%,100%{fill:#CBD5E1}}
+@keyframes chk0{0%,17.14%{opacity:0}19.29%,92.86%{opacity:1}97.14%,100%{opacity:0}}
+.card0{animation:card0 14.0s ease-in-out infinite}
+.dot0{animation:dot0 14.0s ease-in-out infinite}
+.chk0{animation:chk0 14.0s ease-in-out infinite}@keyframes arr0{0%,19.29%{stroke:#CBD5E1;opacity:.6}22.86%,30.71%{stroke:#1C70B7;opacity:1}35.71%,92.86%{stroke:#16A34A;opacity:1}97.14%,100%{stroke:#CBD5E1;opacity:.6}}
+.arr0{animation:arr0 14.0s ease-in-out infinite}
+@keyframes card1{0%,28.57%{fill:#F8FAFC;stroke:#CBD5E1}30.71%,36.43%{fill:#EAF3FB;stroke:#1C70B7}38.57%,92.86%{fill:#ECFDF3;stroke:#16A34A}97.14%,100%{fill:#F8FAFC;stroke:#CBD5E1}}
+@keyframes dot1{0%,28.57%{fill:#CBD5E1}30.71%,36.43%{fill:#1C70B7}38.57%,92.86%{fill:#16A34A}97.14%,100%{fill:#CBD5E1}}
+@keyframes chk1{0%,38.57%{opacity:0}40.71%,92.86%{opacity:1}97.14%,100%{opacity:0}}
+.card1{animation:card1 14.0s ease-in-out infinite}
+.dot1{animation:dot1 14.0s ease-in-out infinite}
+.chk1{animation:chk1 14.0s ease-in-out infinite}@keyframes arr1{0%,40.71%{stroke:#CBD5E1;opacity:.6}44.29%,52.14%{stroke:#1C70B7;opacity:1}57.14%,92.86%{stroke:#16A34A;opacity:1}97.14%,100%{stroke:#CBD5E1;opacity:.6}}
+.arr1{animation:arr1 14.0s ease-in-out infinite}
+@keyframes card2{0%,50.0%{fill:#F8FAFC;stroke:#CBD5E1}52.14%,57.86%{fill:#EAF3FB;stroke:#1C70B7}60.0%,92.86%{fill:#ECFDF3;stroke:#16A34A}97.14%,100%{fill:#F8FAFC;stroke:#CBD5E1}}
+@keyframes dot2{0%,50.0%{fill:#CBD5E1}52.14%,57.86%{fill:#1C70B7}60.0%,92.86%{fill:#16A34A}97.14%,100%{fill:#CBD5E1}}
+@keyframes chk2{0%,60.0%{opacity:0}62.14%,92.86%{opacity:1}97.14%,100%{opacity:0}}
+.card2{animation:card2 14.0s ease-in-out infinite}
+.dot2{animation:dot2 14.0s ease-in-out infinite}
+.chk2{animation:chk2 14.0s ease-in-out infinite}@keyframes arr2{0%,62.14%{stroke:#CBD5E1;opacity:.6}65.71%,73.57%{stroke:#1C70B7;opacity:1}78.57%,92.86%{stroke:#16A34A;opacity:1}97.14%,100%{stroke:#CBD5E1;opacity:.6}}
+.arr2{animation:arr2 14.0s ease-in-out infinite}
+@keyframes card3{0%,71.43%{fill:#F8FAFC;stroke:#CBD5E1}73.57%,79.29%{fill:#EAF3FB;stroke:#1C70B7}81.43%,92.86%{fill:#ECFDF3;stroke:#16A34A}97.14%,100%{fill:#F8FAFC;stroke:#CBD5E1}}
+@keyframes dot3{0%,71.43%{fill:#CBD5E1}73.57%,79.29%{fill:#1C70B7}81.43%,92.86%{fill:#16A34A}97.14%,100%{fill:#CBD5E1}}
+@keyframes chk3{0%,81.43%{opacity:0}83.57%,92.86%{opacity:1}97.14%,100%{opacity:0}}
+.card3{animation:card3 14.0s ease-in-out infinite}
+.dot3{animation:dot3 14.0s ease-in-out infinite}
+.chk3{animation:chk3 14.0s ease-in-out infinite}@keyframes feed{0%,2.14%{opacity:0}7.14%,82.14%{opacity:1}89.29%,100%{opacity:0}}
+.feed{animation:feed 14.0s ease-in-out infinite}</style>
+<rect x="120" y="14" width="240" height="64" rx="12" fill="#02081D"/>
+<text x="240" y="40" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">ClusterPromotion</text>
+<text x="240" y="60" text-anchor="middle" font-size="11.5" fill="#9FB3C8">one profileSpec, defined once</text>
+<path class="feed" d="M240 78 V102 H66.0 V150" stroke="#1C70B7" stroke-width="1.5" stroke-dasharray="4 4" fill="none" opacity="0"/>
+<path class="feed" d="M240 78 V102 H186.0 V150" stroke="#1C70B7" stroke-width="1.5" stroke-dasharray="4 4" fill="none" opacity="0"/>
+<path class="feed" d="M240 78 V102 H306.0 V150" stroke="#1C70B7" stroke-width="1.5" stroke-dasharray="4 4" fill="none" opacity="0"/>
+<path class="feed" d="M240 78 V102 H426.0 V150" stroke="#1C70B7" stroke-width="1.5" stroke-dasharray="4 4" fill="none" opacity="0"/>
+<rect class="card0" x="18" y="150" width="96" height="104" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+<text x="66.0" y="176" text-anchor="middle" font-size="12.5" font-weight="700" fill="#02081D">development</text>
+<circle class="dot0" cx="40" cy="204" r="9" fill="#CBD5E1"/>
+<circle class="dot0" cx="66" cy="204" r="9" fill="#CBD5E1"/>
+<circle class="dot0" cx="92" cy="204" r="9" fill="#CBD5E1"/>
+<g class="chk0" opacity="0"><circle cx="66.0" cy="234" r="10" fill="#16A34A"/><path d="M61.0 234 l3.5 3.5 l6.5 -7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<path class="arr0" d="M117 202.0 H135" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round" opacity=".6"/>
+<path d="M129 197.0 l6 5 l-6 5" class="arr0" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity=".6"/>
+<rect class="card1" x="138" y="150" width="96" height="104" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+<text x="186.0" y="176" text-anchor="middle" font-size="12.5" font-weight="700" fill="#02081D">uat</text>
+<circle class="dot1" cx="160" cy="204" r="9" fill="#CBD5E1"/>
+<circle class="dot1" cx="186" cy="204" r="9" fill="#CBD5E1"/>
+<circle class="dot1" cx="212" cy="204" r="9" fill="#CBD5E1"/>
+<g class="chk1" opacity="0"><circle cx="186.0" cy="234" r="10" fill="#16A34A"/><path d="M181.0 234 l3.5 3.5 l6.5 -7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<path class="arr1" d="M237 202.0 H255" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round" opacity=".6"/>
+<path d="M249 197.0 l6 5 l-6 5" class="arr1" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity=".6"/>
+<rect class="card2" x="258" y="150" width="96" height="104" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+<text x="306.0" y="176" text-anchor="middle" font-size="12.5" font-weight="700" fill="#02081D">staging</text>
+<circle class="dot2" cx="280" cy="204" r="9" fill="#CBD5E1"/>
+<circle class="dot2" cx="306" cy="204" r="9" fill="#CBD5E1"/>
+<circle class="dot2" cx="332" cy="204" r="9" fill="#CBD5E1"/>
+<g class="chk2" opacity="0"><circle cx="306.0" cy="234" r="10" fill="#16A34A"/><path d="M301.0 234 l3.5 3.5 l6.5 -7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<path class="arr2" d="M357 202.0 H375" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round" opacity=".6"/>
+<path d="M369 197.0 l6 5 l-6 5" class="arr2" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity=".6"/>
+<rect class="card3" x="378" y="150" width="96" height="104" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+<text x="426.0" y="176" text-anchor="middle" font-size="12.5" font-weight="700" fill="#02081D">production</text>
+<circle class="dot3" cx="400" cy="204" r="9" fill="#CBD5E1"/>
+<circle class="dot3" cx="426" cy="204" r="9" fill="#CBD5E1"/>
+<circle class="dot3" cx="452" cy="204" r="9" fill="#CBD5E1"/>
+<g class="chk3" opacity="0"><circle cx="426.0" cy="234" r="10" fill="#16A34A"/><path d="M421.0 234 l3.5 3.5 l6.5 -7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<text x="240" y="284" text-anchor="middle" font-size="12" fill="#526471">Each stage is promoted only after the previous one is healthy</text>
+<text x="240" y="302" text-anchor="middle" font-size="12" fill="#526471">and its trigger is met: a time delay or a manual approval</text>
+</svg>

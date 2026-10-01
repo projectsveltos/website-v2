@@ -60,6 +60,9 @@ const getYoutubeId = (url) => {
             <div class="w-full lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
               <img src={f.icon} alt={f.title} class="w-10 h-10 mb-6 object-contain" />
               <h3 class="text-2xl font-bold mb-4 text-black">{f.title}</h3>
+              {f.badge && (
+                <span class="inline-block w-fit -mt-2 mb-4 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide">{f.badge}</span>
+              )}
               <p class="text-[1.125rem] text-gray mb-0 leading-relaxed">{f.desc}</p>
               {f.learnMore && (
                 <a

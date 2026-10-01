@@ -51,6 +51,15 @@
                 "learnMore": "https://projectsveltos.github.io/sveltos/latest/addons/addons/"
             },
             {
+                "icon": "/images/icons/k8s.svg",
+                "title": "Progressive Rollouts with ClusterPromotion",
+                "badge": "Enterprise",
+                "desc": "Define a configuration once and promote it stage by stage, from development to production. Each stage is deployed only after the previous one is healthy and its promotion trigger is met.",
+                "image": "/images/background-images/cluster-promotion.svg",
+                "detail": "Stop maintaining one ClusterProfile per environment. A single ClusterPromotion holds the shared profileSpec and an ordered list of stages, and Sveltos generates the ClusterProfile for each stage as the rollout advances, limiting the blast radius of a bad change.",
+                "learnMore": "https://projectsveltos.github.io/sveltos/latest/deployment_order/progressive_rollout/"
+            },
+            {
                 "icon": "/images/icons/eventdriven.svg",
                 "title": "Drift Detection & Remediation",
                 "desc": "Automatically detect and correct configuration drift. Ensure clusters always match the desired state, preventing manual 'quick fixes' from causing permanent issues.",
@@ -100,6 +109,10 @@
             {
                 "title": "Pull Mode",
                 "text": "Enable zero-trust management where agents connect outbound to the management plane. Securely manage clusters without opening inbound ports or exposing API servers."
+            },
+            {
+                "title": "Work Inside Limited Permissions",
+                "text": "Not every cluster you manage is yours to administer. When a cluster belongs to another team, you may only be allowed to touch a few of its namespaces. Tell Sveltos which namespaces it may use by adding one annotation to the cluster, and it stays inside them. You do not need cluster-admin access, and you get no permission errors."
             },
             {
                 "title": "Progressive Rollouts & Promotions",
@@ -247,7 +260,7 @@
         "cards": [
             {
                 "title": "Hybrid Multicloud Operations",
-                "desc": "Manage add-ons and applications across AWS, GCP, Azure, and on-prem Kubernetes clusters from a single management plane."
+                "desc": "Manage add-ons and applications across AWS, GCP, Azure, and on-prem Kubernetes clusters from a single management plane, including clusters behind a firewall that cannot accept inbound connections."
             },
             {
                 "title": "Fleet-Wide Add-on Delivery",
@@ -259,7 +272,7 @@
             },
             {
                 "title": "Multi-Tenant Platforms",
-                "desc": "Isolate and manage cluster configurations per tenant with Profiles and label selectors."
+                "desc": "Isolate and manage cluster configurations per tenant with namespaced Profiles, tenant namespaces, and label selectors."
             },
             {
                 "title": "Database Deployment Automation",
