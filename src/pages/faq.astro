@@ -38,6 +38,11 @@ const heroData = {
   <main>
     <Section backgroundStyling="py-[3rem] px-[3rem]">
       <div class="w-full">
+
+        <!-- GENERAL -->
+        <h3 class="text-2xl font-bold text-black mx-[3rem] mb-2 mt-4">General</h3>
+        <p class="text-gray mx-[3rem] mb-6">Learn what Sveltos is, how it scales, and how to get started.</p>
+
         <Collapse title="What is Project Sveltos?" collapseID="what-is-sveltos">
           <div class="relative flex flex-wrap pb-8">
             <p class="text-lg leading-relaxed text-gray">
@@ -59,7 +64,7 @@ const heroData = {
           </div>
         </Collapse>
 
-        <Collapse title="How do I get started with Sveltos?" collapseID="how-to-start" isLast>
+        <Collapse title="How do I get started with Sveltos?" collapseID="how-to-start">
           <div class="relative flex flex-wrap pb-8">
             <p class="text-lg leading-relaxed text-gray mb-6">
               Getting started is easy! You can install Sveltos on your management cluster using our Helm chart or a single YAML manifest. Once installed, you can start registering managed clusters and creating your first ClusterProfiles.
@@ -74,13 +79,17 @@ const heroData = {
           </div>
         </Collapse>
 
-        <Collapse title="Is Sveltos a replacement for GitOps Controllers (ArgoCD, Flux)" collapseID="gitops-replacement">
+        <Collapse title="Is Sveltos a replacement for GitOps Controllers (ArgoCD, Flux)" collapseID="gitops-replacement" isLast>
           <div class="relative flex flex-wrap pb-8">
             <p class="text-lg leading-relaxed text-gray">
               No. Sveltos is designed to extend and enhance GitOps workflows, not replace them. While tools like ArgoCD and Flux are excellent for managing individual clusters, Sveltos excels at distributing those configurations across a massive fleet. It integrates deeply with Flux, allowing you to use Flux sources to deploy resources to any number of managed clusters automatically.
             </p>
           </div>
         </Collapse>
+
+        <!-- FEATURES & CAPABILITIES -->
+        <h3 class="text-2xl font-bold text-black mx-[3rem] mb-2 mt-12">Features & Capabilities</h3>
+        <p class="text-gray mx-[3rem] mb-6">Add-on formats, multi-tenancy, events, drift detection, rollouts, and Pull Mode.</p>
 
         <Collapse title="What add-on formats does Sveltos support?" collapseID="supported-formats">
           <div class="relative flex flex-wrap pb-8">
@@ -129,7 +138,7 @@ const heroData = {
           </div>
         </Collapse>
 
-        <Collapse title="What is Pull Mode and when should I use it?" collapseID="pull-mode">
+        <Collapse title="What is Pull Mode and when should I use it?" collapseID="pull-mode" isLast>
           <div class="relative flex flex-wrap pb-8">
             <p class="text-lg leading-relaxed text-gray">
               Pull Mode is designed for high-security, air-gapped, or restricted environments where the management cluster cannot directly reach managed clusters. In Pull Mode, a lightweight agent (Sveltos-agent) runs on each managed cluster and initiates outbound connections to poll the management cluster for updates. This eliminates the need for inbound firewall rules and works perfectly for clusters behind NAT or in private VPCs.
@@ -137,7 +146,11 @@ const heroData = {
           </div>
         </Collapse>
 
-        <Collapse title="What does Sveltos Enterprise cost?" collapseID="enterprise-pricing">
+        <!-- ENTERPRISE & PRICING -->
+        <h3 class="text-2xl font-bold text-black mx-[3rem] mb-2 mt-12">Enterprise & Pricing</h3>
+        <p class="text-gray mx-[3rem] mb-6">Costs, licensing, trials, and what Enterprise adds on top of open source.</p>
+
+        <Collapse title="How much the Sveltos Enterprise License cost?" collapseID="enterprise-pricing">
           <div class="relative flex flex-wrap pb-8">
             <p class="text-lg leading-relaxed text-gray mb-4">
               Sveltos is open source and free forever. Enterprise is priced per year by fleet size: {formatPrice(smallTier)} for {smallTier.label.toLowerCase()} and {formatPrice(mediumTier)} for {mediumTier.label.toLowerCase()}. For fleets larger than 100 clusters, contact us for a quote.
@@ -176,7 +189,7 @@ const heroData = {
           </div>
         </Collapse>
 
-        <Collapse title="What happens when an Enterprise license expires?" collapseID="enterprise-license-expiry">
+        <Collapse title="What happens when an Enterprise license expires?" collapseID="enterprise-license-expiry" isLast>
           <div class="relative flex flex-wrap pb-8">
             <p class="text-lg leading-relaxed text-gray">
               The Enterprise features stop working. Every open-source feature keeps running, so your fleet continues to be managed and there is no lock-in on the core.
