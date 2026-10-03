@@ -67,12 +67,12 @@ const heroData = {
     <Section>
       {
         adopterGroups.map((group) => (
-          <div class="w-full pb-[3rem]">
-            <div class="pl-[3rem] pt-[3rem] mb-[2.62rem]">
+          <div class="w-full pb-[3rem] px-[3rem]">
+            <div class="pt-[3rem] mb-[2rem]">
               <h2 class="text-[1.5rem] font-[500] leading-[125%] mb-2">{group.heading}</h2>
               <p class="text-gray m-0 max-w-2xl">{group.blurb}</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-start">
               {group.companies.map((company) => (
                 <CarouselCard company={company} variant="small" border />
               ))}

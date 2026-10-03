@@ -107,7 +107,7 @@ const comparisonRows = [
                 <span>Community Slack Support</span>
               </li>
             </ul>
-            <Button type="secondary" cta="Get Started Free" url="https://projectsveltos.github.io/sveltos/getting_started/install/install/" color="primary" iconName="arrow" />
+            <Button type="secondary" cta="Get Started Free" url="https://projectsveltos.io/main/getting_started/install/quick_start/" color="primary" iconName="arrow" />
           </div>
 
           <!-- ENTERPRISE SUPPORT TIER -->
@@ -231,203 +231,181 @@ const comparisonRows = [
 
     <!-- ENTERPRISE OFFERINGS -->
     <Section id="enterprise-features" sectionStyles="py-[3rem] px-[1.5rem] xl:px-[3.5rem] bg-background">
-      <div class="max-w-5xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
-        <div class="lg:w-1/2">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="text-primary tag block m-0">Enterprise Features</span>
-          </div>
-          <h2 class="text-4xl mb-6 leading-tight">Scalable, Secure, and Intelligent Deployments</h2>
-          <p class="text-lg text-gray mb-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="text-primary tag block mb-2">Enterprise Features</span>
+          <h2 class="text-4xl mb-4 leading-tight">Scalable, Secure, and Intelligent Deployments</h2>
+          <p class="text-lg text-gray max-w-3xl mx-auto">
             Manage your entire Kubernetes fleet with enterprise-grade capabilities designed for security, scale, and intelligent operations.
           </p>
-          <div class="grid grid-cols-1 gap-8">
-            <!-- Pull Mode -->
-            <div class="flex gap-4 items-start">
-              <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-borderGray">
-                <span class="text-primary font-bold text-xl">1</span>
-              </div>
-              <div>
-                <strong class="text-xl text-black block mb-2">Pull Mode</strong>
-                <p class="text-[0.95rem] text-gray m-0 leading-relaxed mb-3">
-                  Ideal for managed clusters behind a firewall, in air-gapped environments, edge deployments with limited bandwidth or highly regulated and secure setups. Managed clusters pull configuration from the management cluster.
-                </p>
-                <ul class="text-[0.9rem] text-gray space-y-1.5 ml-0">
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Zero inbound firewall rules requirement</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Works with restricted networks and edge locations</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Automatic re-sync when connectivity is restored</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Progressive Rollout Pipelines -->
-            <div class="flex gap-4 items-start">
-              <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-borderGray">
-                <span class="text-primary font-bold text-xl">2</span>
-              </div>
-              <div>
-                <strong class="text-xl text-black block mb-2">Progressive Rollout Pipelines</strong>
-                <p class="text-[0.95rem] text-gray m-0 leading-relaxed mb-3">
-                  Deploy with confidence through staged environments. Gradually promote configurations from QA → Staging → Pre-Prod → Production with automated pre and post validation health checks.
-                </p>
-                <ul class="text-[0.9rem] text-gray space-y-1.5 ml-0">
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>As many pipelines as you need, for example one per service</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Stage-based promotion</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Manual or automatic promotion per stage</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Health checks before and after advancing stages</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Job-based active probes (smoke tests, connectivity checks)</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- MCP Server -->
-            <div class="flex gap-4 items-start">
-              <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-borderGray">
-                <span class="text-primary font-bold text-xl">3</span>
-              </div>
-              <div>
-                <strong class="text-xl text-black block mb-2">AI-Powered Management with MCP Server</strong>
-                <p class="text-[0.95rem] text-gray m-0 leading-relaxed mb-3">
-                  Connect AI assistants and chatbots directly to your Sveltos cluster. Manage operations through natural language commands and automated troubleshooting.
-                </p>
-                <ul class="text-[0.9rem] text-gray space-y-1.5 ml-0">
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Natural language cluster management</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Automated troubleshooting and diagnostics</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Real-time cluster analysis and insights</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Job-Based Health Validation -->
-            <div class="flex gap-4 items-start">
-              <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-borderGray">
-                <span class="text-primary font-bold text-xl">4</span>
-              </div>
-              <div>
-                <strong class="text-xl text-black block mb-2">Job-Based Health Validation</strong>
-                <p class="text-[0.95rem] text-gray m-0 leading-relaxed mb-3">
-                  Go beyond inspecting existing state. Deploy Kubernetes Jobs into managed clusters to actively run smoke tests, synthetic transactions, and connectivity probes as part of your deployment health checks.
-                </p>
-                <ul class="text-[0.9rem] text-gray space-y-1.5 ml-0">
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Deploy Job manifests from ConfigMaps or Secrets</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Automatic Job cleanup after completion</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Status-driven results with detailed error messaging</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Combinable with resource and metric health checks</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Namespace-Scoped Agents -->
-            <div class="flex gap-4 items-start">
-              <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-borderGray">
-                <span class="text-primary font-bold text-xl">5</span>
-              </div>
-              <div>
-                <strong class="text-xl text-black block mb-2">Least-Privilege Agents</strong>
-                <p class="text-[0.95rem] text-gray m-0 leading-relaxed mb-3">
-                  Align Sveltos agents with the exact RBAC boundaries your cluster owners grant. Restrict drift detection and monitoring to specific namespaces instead of requiring cluster-wide access.
-                </p>
-                <ul class="text-[0.9rem] text-gray space-y-1.5 ml-0">
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Credential-scoped drift detection and monitoring</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Multi-tenant ready for teams with separate namespace access</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>One annotation configures drift-detection-manager and sveltos-agent</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Eliminates permission errors from over-broad watch scopes</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Priority Patches & Feature Delivery -->
-            <div class="flex gap-4 items-start">
-              <div class="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-borderGray">
-                <span class="text-primary font-bold text-xl">6</span>
-              </div>
-              <div>
-                <strong class="text-xl text-black block mb-2">Priority Patches & Feature Delivery</strong>
-                <p class="text-[0.95rem] text-gray m-0 leading-relaxed mb-3">
-                  Don't wait for the next scheduled release. When a CVE affects your deployment, we build and ship you a patched image directly, and your feature requests get prioritized on our roadmap.
-                </p>
-                <ul class="text-[0.9rem] text-gray space-y-1.5 ml-0">
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Custom CVE-patched image builds delivered ahead of the next release</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>No waiting on the standard release cadence for critical security fixes</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Feature requests prioritized on the roadmap for Enterprise customers</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="text-primary mt-0.5">✓</span>
-                    <span>Direct engineering access for urgent issues</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div class="lg:w-1/2 min-h-[400px]">
-          <div class="text-center">
-            <img src="/images/background-images/pullmode.png" alt="Enterprise Features" class="w-full h-auto" />
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Pull Mode -->
+          <div class="bg-white rounded-2xl p-6 border border-borderGray hover:shadow-lg transition-shadow flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 mb-4">
+              <span class="text-primary font-bold text-xl">1</span>
+            </div>
+            <strong class="text-lg text-black block mb-2">Pull Mode</strong>
+            <p class="text-[0.9rem] text-gray m-0 leading-relaxed mb-2">
+              Ideal for clusters behind firewalls, air-gapped environments, edge deployments, or highly regulated setups. Managed clusters pull configuration from the management cluster.
+            </p>
+            <ul class="text-[0.85rem] text-gray space-y-1.5 ml-0">
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Zero inbound firewall rules requirement</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Works with restricted networks and edge locations</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Automatic re-sync when connectivity is restored</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Progressive Rollout Pipelines -->
+          <div class="bg-white rounded-2xl p-6 border border-borderGray hover:shadow-lg transition-shadow flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 mb-4">
+              <span class="text-primary font-bold text-xl">2</span>
+            </div>
+            <strong class="text-lg text-black block mb-2">Progressive Rollout Pipelines</strong>
+            <p class="text-[0.9rem] text-gray m-0 leading-relaxed mb-2">
+              Deploy with confidence through staged environments. Promote configurations from QA to Staging to Production with automated health checks.
+            </p>
+            <ul class="text-[0.85rem] text-gray space-y-1.5 ml-0">
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>As many pipelines as you need</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Manual or automatic promotion per stage</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Health checks before and after advancing stages</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Job-based active probes (smoke tests, connectivity checks)</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Job-Based Health Validation -->
+          <div class="bg-white rounded-2xl p-6 border border-borderGray hover:shadow-lg transition-shadow flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 mb-4">
+              <span class="text-primary font-bold text-xl">3</span>
+            </div>
+            <strong class="text-lg text-black block mb-2">Job-Based Health Validation</strong>
+            <p class="text-[0.9rem] text-gray m-0 leading-relaxed mb-2">
+              Go beyond inspecting existing state. Deploy Kubernetes Jobs to actively run smoke tests, synthetic transactions, and connectivity probes.
+            </p>
+            <ul class="text-[0.85rem] text-gray space-y-1.5 ml-0 mt-auto">
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Deploy Job manifests from ConfigMaps or Secrets</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Automatic Job cleanup after completion</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Status-driven results with detailed error messaging</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Combinable with resource and metric health checks</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Namespace-Scoped Agents -->
+          <div class="bg-white rounded-2xl p-6 border border-borderGray hover:shadow-lg transition-shadow flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 mb-4">
+              <span class="text-primary font-bold text-xl">4</span>
+            </div>
+            <strong class="text-lg text-black block mb-2">Least-Privilege Agents</strong>
+            <p class="text-[0.9rem] text-gray m-0 leading-relaxed mb-2">
+              Align Sveltos agents with the exact RBAC boundaries your cluster owners grant. Restrict drift detection to specific namespaces instead of cluster-wide access.
+            </p>
+            <ul class="text-[0.85rem] text-gray space-y-1.5 ml-0 mt-auto">
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Credential-scoped drift detection and monitoring</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Multi-tenant ready for separate namespace access</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>One annotation configures both agents</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Eliminates over-broad watch scope errors</span>
+              </li>
+            </ul>
+          </div>
+
+
+          <!-- MCP Server -->
+          <div class="bg-white rounded-2xl p-6 border border-borderGray hover:shadow-lg transition-shadow flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 mb-4">
+              <span class="text-primary font-bold text-xl">5</span>
+            </div>
+            <strong class="text-lg text-black block mb-2">AI-Powered Management with MCP Server</strong>
+            <p class="text-[0.9rem] text-gray m-0 leading-relaxed mb-2">
+              Connect AI assistants directly to your Sveltos cluster. Manage operations through natural language commands and automated troubleshooting.
+            </p>
+            <ul class="text-[0.85rem] text-gray space-y-1.5 ml-0">
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Natural language cluster management</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Automated troubleshooting and diagnostics</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Real-time cluster analysis and insights</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Priority Patches & Feature Delivery -->
+          <div class="bg-white rounded-2xl p-6 border border-borderGray hover:shadow-lg transition-shadow flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 mb-4">
+              <span class="text-primary font-bold text-xl">6</span>
+            </div>
+            <strong class="text-lg text-black block mb-2">Priority Patches & Feature Delivery</strong>
+            <p class="text-[0.9rem] text-gray m-0 leading-relaxed mb-2">
+              Don't wait for the next scheduled release. Get CVE-patched images directly, and your feature requests get prioritized on our roadmap.
+            </p>
+            <ul class="text-[0.85rem] text-gray space-y-1.5 ml-0">
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>CVE-patched image builds ahead of the next release</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>No waiting on standard release cadence for security fixes</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Feature requests prioritized for Enterprise customers</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Direct engineering access for urgent issues</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
