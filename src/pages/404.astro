@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+import homeData from '../data/home.json';
+
+const seoMetaData = {
+  description: 'This page does not exist. Go back to the Sveltos home page or read the documentation.',
+  slug: '404/'
+};
+---
+
+<Layout title="Page not found" seo={seoMetaData}>
+  <main>
+    <Section sectionStyles="px-[1.5rem] py-[6rem] bg-white">
+      <div class="max-w-2xl mx-auto flex flex-col items-center text-center">
+        <img
+          src="/images/mascot/sveltopus-solo.png"
+          alt="Admiral Sveltopus, the Sveltos mascot"
+          width="240"
+          height="240"
+          class="w-48 sm:w-60 h-auto mb-8"
+        />
+        <span class="text-primary tag block mb-2">404</span>
+        <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-black">Page not found</h1>
+        <p class="text-gray text-lg leading-relaxed mb-10">
+          The page you are looking for does not exist or has been moved.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <Button cta="Back to home" url="/" type="primary" color="white" />
+          <Button cta="Read the documentation" url={homeData.settings.documentationUrl} target="_blank" type="secondary" color="black" iconName="arrow" />
+        </div>
+      </div>
+    </Section>
+  </main>
+</Layout>
