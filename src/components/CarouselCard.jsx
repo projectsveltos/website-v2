@@ -1,6 +1,6 @@
 import React from "react";
 
-const CarouselCard = ({company, border = false, variant = 'default'}) => {
+const CarouselCard = ({company, border = false, variant = 'default', centered = false}) => {
 
   const isSmall = variant === 'small';
   // Sveltos Blue
@@ -10,8 +10,8 @@ const CarouselCard = ({company, border = false, variant = 'default'}) => {
   let background = company?.background ? company.background : "#FFFFFF";
 
   let tileStyling = `
-    ${isSmall ? 'h-32 md:h-40 w-full' : 'lg:h-[12rem] h-[10rem] w-full'}
-    ${isSmall ? 'p-8' : 'p-10'}
+    ${isSmall ? 'h-32 md:h-40 w-full' : 'lg:h-[12rem] h-[9rem] sm:h-[10rem] w-full'}
+    ${isSmall ? 'p-6 sm:p-8' : 'p-6 sm:p-8 lg:p-10'}
     rounded-xl mb-4 flex items-center justify-center transition-all duration-300
     ${border ? 'border-2' : 'border-0'}
   `;
@@ -42,8 +42,8 @@ const CarouselCard = ({company, border = false, variant = 'default'}) => {
         />
       </div>
 
-      <div className="text-left px-1">
-        <p className={`mb-1 ${isSmall ? 'text-[1.125rem]' : 'text-[1.375rem]'} text-black font-[700] leading-[120%] tracking-tight flex items-center group-hover:text-[#0f52b9] transition-colors`}>
+      <div className={`${centered ? 'text-center' : 'text-left'} px-1`}>
+        <p className={`mb-1 ${isSmall ? 'text-[1rem] sm:text-[1.125rem]' : 'text-base sm:text-[1.375rem]'} text-black font-[700] leading-[120%] tracking-tight flex items-center ${centered ? 'justify-center' : ''} group-hover:text-[#0f52b9] transition-colors`}>
           {company.name}
           <span className="ml-[0.5rem] opacity-0 group-hover:opacity-100 transition-all transform -translate-x-1 group-hover:translate-x-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 15 15" fill="none">
@@ -51,7 +51,7 @@ const CarouselCard = ({company, border = false, variant = 'default'}) => {
             </svg>
           </span>
         </p>
-        <p className={`${isSmall ? 'text-[0.875rem]' : 'text-[1rem] lg:text-[1.125rem]'} text-gray-500 font-[500] leading-snug line-clamp-2`}>
+        <p className={`${isSmall ? 'text-xs sm:text-[0.875rem]' : 'text-xs sm:text-[1rem] lg:text-[1.125rem]'} text-gray-500 font-[500] leading-snug line-clamp-2`}>
           {company.description}
         </p>
         {isSmall && company.useCase && (
