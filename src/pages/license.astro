@@ -1,0 +1,178 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Hero from '../components/Hero.astro';
+
+const seoMetaData = {
+  description: 'Sveltos binary license: the published images of sveltos-agent, drift-detection-manager, sveltos-applier, mcp-server and techsupport are free to use; features that need a license key require a Sveltos Enterprise license.',
+  slug: 'license/',
+  // Reachable only by the link: search engines must not index it
+  noindex: true
+};
+
+const restrictions = [
+  'access, request or attempt to obtain the source code of the Software;',
+  'modify the Software or create derivative works from it;',
+  'reverse engineer, decompile or disassemble the Software, except to the extent that applicable law expressly permits this despite this restriction;',
+  'remove, bypass, disable or circumvent any license key check or other technical protection in the Software, or enable a Licensed Feature without a valid license.',
+];
+---
+
+<Layout title="License: Sveltos" seo={seoMetaData}>
+  <header>
+    <Hero
+      variant="standard"
+      headline="Sveltos Binary License"
+      subhead="Install and use Sveltos freely, in production, on any number of clusters. No registration, no key. Premium features need a separate license."
+      isWhiteBg={true}
+      isSmall={true}
+    />
+  </header>
+
+  <main>
+    <Section sectionStyles="py-[3rem] px-[1.5rem] xl:px-[3.5rem] bg-white">
+      <div class="max-w-4xl mx-auto w-full flex flex-col gap-12">
+
+        <div class="bg-primary/5 border border-primary/10 rounded-2xl p-8">
+          <h2 class="text-3xl mb-4">In short</h2>
+          <p class="text-lg text-gray leading-relaxed mb-0">
+            Most of Sveltos is open source under the Apache License 2.0. This license covers only the five components whose source code is not published:
+            sveltos-agent, drift-detection-manager, sveltos-applier, mcp-server and techsupport.
+            All other Sveltos components are open source and are released under the Apache License 2.0, not under this license.
+            You can run their published images and executables, including commercially, on any number of clusters, and redistribute them unmodified, including as part of your own product.
+            Features that are enabled by a license key (for example pull-mode, ClusterPromotion, grouping, restricted RBACs, etc.) require a Sveltos Enterprise license.
+            Without a license key those features stay disabled, so you can run the images without a license: whatever works is free to use.
+            This summary is for convenience only: the terms below are the license.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-3xl mb-4">Common questions</h2>
+          <p class="text-lg text-gray leading-relaxed mb-4">A summary for convenience only: the terms below are the license.</p>
+          <dl class="space-y-4 text-lg text-gray leading-relaxed">
+            <div>
+              <dt class="font-semibold">Can I install Sveltos freely?</dt>
+              <dd>Yes. No registration and no license key.</dd>
+            </div>
+            <div>
+              <dt class="font-semibold">Can I use it in production?</dt>
+              <dd>Yes.</dd>
+            </div>
+            <div>
+              <dt class="font-semibold">Can I include it in my product and sell it?</dt>
+              <dd>Yes.</dd>
+            </div>
+            <div>
+              <dt class="font-semibold">What if I do nothing?</dt>
+              <dd>Premium features are disabled by default, so nothing you have not licensed can switch on. Whatever works is free to use.</dd>
+            </div>
+            <div>
+              <dt class="font-semibold">What if I need a premium feature?</dt>
+              <dd>
+                That needs a separate license from Sveltos.
+                See <a href="https://website.projectsveltos.io/pricing/" class="text-primary font-semibold">https://website.projectsveltos.io/pricing/</a>.
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div>
+          <p class="text-lg text-gray leading-relaxed mb-4">Copyright (c) 2026 Sveltos SRL. All rights reserved.</p>
+          <p class="text-lg text-gray leading-relaxed mb-0">
+            This license applies to the container images and executable files published by Sveltos SRL ("Sveltos") for the following Sveltos components:
+            sveltos-agent, drift-detection-manager, sveltos-applier, mcp-server and techsupport (the "Software").
+            It does not apply to the other Sveltos components, which are open source and are released under the Apache License 2.0.
+            It does not grant any right in the source code of the Software, which is proprietary and confidential.
+            By pulling, installing or running the Software you agree to the terms below.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-3xl mb-4">1. Grant of use</h2>
+          <p class="text-lg text-gray leading-relaxed mb-0">
+            Sveltos grants you a worldwide, non-exclusive, non-transferable, royalty-free license to install and run the unmodified Software,
+            for any purpose including production and commercial use, on any number of clusters and nodes.
+            No registration, fee or license key is required. Licensed Features are covered by Section 2.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-3xl mb-4">2. Free Features and Licensed Features</h2>
+          <p class="text-lg text-gray leading-relaxed mb-4">
+            "Licensed Features" are the features of the Software that are enabled only by a valid license key issued by Sveltos.
+            They include, as described in the Sveltos documentation at
+            <a href="https://projectsveltos.io" class="text-primary font-semibold">https://projectsveltos.io</a>
+            and as updated by Sveltos from time to time, pull-mode, ClusterPromotion, grouping of multiple clusters behind a single agent instance and restricted RBACs.
+            All other features are "Free Features".
+          </p>
+          <p class="text-lg text-gray leading-relaxed mb-4">
+            Without a license key, the Licensed Features do not work: the Software leaves them disabled.
+            You can therefore run the Software without a license and without worrying about using a Licensed Feature by accident.
+            Whatever works without a license key is a Free Feature and is free to use under this license.
+          </p>
+          <p class="text-lg text-gray leading-relaxed mb-0">
+            Using a Licensed Feature in any environment requires a valid, current license issued by Sveltos, under a separate written agreement.
+            This license does not grant any right to use Licensed Features.
+            To get a license, see <a href="https://website.projectsveltos.io/pricing/" class="text-primary font-semibold">https://website.projectsveltos.io/pricing/</a>.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-3xl mb-4">3. Redistribution</h2>
+          <p class="text-lg text-gray leading-relaxed mb-0">
+            You may copy and redistribute the unmodified Software, for example by mirroring the container image into a private or air-gapped registry,
+            or by including it in your own product or service, which you may charge for, provided that you keep this license file and all notices unchanged.
+            Each recipient receives the Software under this license directly from Sveltos, and Licensed Features still require a valid license under Section 2.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-3xl mb-4">4. Restrictions</h2>
+          <p class="text-lg text-gray leading-relaxed mb-4">You may not, and may not allow others to:</p>
+          <ol class="list-[lower-alpha] pl-6 space-y-2 text-lg text-gray">
+            {restrictions.map((item) => <li>{item}</li>)}
+          </ol>
+        </div>
+
+        <div>
+          <h2 class="text-3xl mb-4">5. Ownership</h2>
+          <p class="text-lg text-gray leading-relaxed mb-0">
+            Sveltos and its licensors keep all rights, title and interest in the Software. No right is granted except as expressly stated in this license.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-3xl mb-4">6. Termination</h2>
+          <p class="text-lg text-gray leading-relaxed mb-0">
+            This license ends automatically if you breach any of its terms. On termination you must stop using the Software and delete all copies.
+            Sveltos may also end this license for the Software, or for a specific version of it, by giving written notice.
+            Sections 4, 5, 6, 7 and 8 survive termination.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-3xl mb-4">7. Disclaimer of warranty and limit of liability</h2>
+          <p class="text-lg text-gray leading-relaxed mb-0">
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL SVELTOS SRL BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM
+            THE USE OF THE SOFTWARE, TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-3xl mb-4">8. General</h2>
+          <p class="text-lg text-gray leading-relaxed mb-0">
+            This license is governed by the laws of Italy, and the courts of Milan, Italy have exclusive jurisdiction.
+            If a provision is held unenforceable, the remaining provisions stay in effect.
+            This license, together with any separate written agreement between you and Sveltos, is the entire agreement about the Software.
+          </p>
+        </div>
+
+        <p class="text-lg text-gray leading-relaxed mb-0">
+          Questions: <a href="mailto:support@projectsveltos.io" class="text-primary font-semibold">support@projectsveltos.io</a>
+        </p>
+
+      </div>
+    </Section>
+  </main>
+</Layout>
