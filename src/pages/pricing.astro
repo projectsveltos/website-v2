@@ -36,6 +36,7 @@ const comparisonRows = [
   { feature: 'Progressive Rollouts (ClusterPromotion)', community: 'Up to 2 ClusterPromotion instances', enterprise: 'Any number of instances' },
   { feature: 'Job-based health validation', community: 'no', enterprise: 'yes' },
   { feature: 'Least-privilege (namespace-scoped) agents', community: 'no', enterprise: 'yes' },
+  { feature: 'Agent grouping (one agent serves several clusters)', community: 'no', enterprise: 'yes' },
   { feature: 'MCP Server for AI-assisted operations', community: 'no', enterprise: 'yes' },
   { feature: 'Support', community: 'GitHub issues, community Slack', enterprise: 'Priority technical support, priority Slack' },
   { feature: 'CVE-patched image builds ahead of the next release', community: 'no', enterprise: 'yes' },
@@ -144,6 +145,10 @@ const comparisonRows = [
               <li class="flex items-center gap-3">
                 <span class="text-primary" set:html={checkIcon} />
                 <span>Least-Privilege Agents</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-primary" set:html={checkIcon} />
+                <span>Agent Grouping</span>
               </li>
               <li class="flex items-center gap-3">
                 <span class="text-primary" set:html={checkIcon} />
@@ -379,10 +384,39 @@ const comparisonRows = [
             </ul>
           </div>
 
-          <!-- Priority Patches & Feature Delivery -->
+          <!-- Agent Grouping -->
           <div class="bg-white rounded-2xl p-6 border border-borderGray hover:shadow-lg transition-shadow flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 mb-4">
               <span class="text-primary font-bold text-xl">6</span>
+            </div>
+            <strong class="text-lg text-black block mb-2">Agent Grouping</strong>
+            <p class="text-[0.9rem] text-gray m-0 leading-relaxed mb-2">
+              Scale to thousands of clusters while keeping your management cluster compact. In agentless mode, one agent serves a whole group of clusters, so the number of agent pods no longer grows with every cluster you add. Fewer pods per node limit means fewer nodes to provision and pay for.
+            </p>
+            <ul class="text-[0.85rem] text-gray space-y-1.5 ml-0">
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>One drift-detection-manager and one sveltos-agent for up to N clusters</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Group size set with a single flag</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Groups created and removed automatically as clusters join and leave</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-primary mt-0.5 shrink-0">✓</span>
+                <span>Fewer pods and fewer nodes on the management cluster as your fleet grows</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Priority Patches & Feature Delivery -->
+          <div class="bg-white rounded-2xl p-6 border border-borderGray hover:shadow-lg transition-shadow flex flex-col">
+            <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 mb-4">
+              <span class="text-primary font-bold text-xl">7</span>
             </div>
             <strong class="text-lg text-black block mb-2">Priority Patches & Feature Delivery</strong>
             <p class="text-[0.9rem] text-gray m-0 leading-relaxed mb-2">
